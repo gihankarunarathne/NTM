@@ -1,0 +1,20 @@
+#! /bin/bash
+echo " Checking/Fixing File Permissions... "
+chown --verbose root:root /usr/bin/ntm
+chmod --verbose +rx /usr/bin/ntm
+
+chown --verbose root:root /usr/share/applications/ntm.desktop
+chmod --verbose +r-x /usr/share/applications/ntm.desktop
+
+chown --verbose root:root /usr/share/pixmaps/ntm.svg
+chmod --verbose +r-x /usr/share/pixmaps/ntm.svg
+
+chown --verbose -R root:root /usr/share/ntm/
+chmod --verbose -R +r-x /usr/share/ntm/
+chmod --verbose +x /usr/share/ntm/
+chmod --verbose +x /usr/share/ntm/stf
+chmod --verbose +x /usr/share/ntm/ntm.py
+chmod --verbose +x /usr/share/ntm/run_ntm.sh
+
+echo OK
+

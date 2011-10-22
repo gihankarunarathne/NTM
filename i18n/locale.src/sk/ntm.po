@@ -1,0 +1,727 @@
+# Pot file for NTM.
+# Copyright (C) 2010 THE NTM'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the NTM package.
+# Luigi Tullio <tluigi@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: NTM 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-06 01:41+0100\n"
+"PO-Revision-Date: 2010-12-22 10:31+0100\n"
+"Last-Translator: ainurko <ainurko@gmail.com>\n"
+"Language-Team: none\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"X-Language: sk_SK\n"
+"X-Source-Language: C\n"
+
+#: event.py:27
+msgid "Unknown event. NTM can not handle this event."
+msgstr "Neznáma udalosť. NTM nemôže spracovať túto udalosť."
+
+#: monthdelta.py:46
+msgid "months must be an integer"
+msgstr "mesiace musia byť celé číslo"
+
+#: monthdelta.py:48
+msgid "months must have magnitude <= 99999999"
+msgstr "mesiace musia mať veľkosť <= 99999999"
+
+#: monthdelta.py:107
+msgid "date value out of range"
+msgstr "hodnota dátumu je mimo rozsahu"
+
+#: monthdelta.py:135
+msgid "in-place division of a monthdelta requires an integer divisor"
+msgstr ""
+
+#: monthdelta.py:163
+msgid "start and end must be dates"
+msgstr "začiatok a koniec musia byť dátumy"
+
+#: mtime.py:77 mtime.py:85 mtime.py:93 mtime.py:102 mtime.py:110 mtime.py:118
+#: mtime.py:126 mtimeslot.py:86 mtimeslot.py:94 mtimeslot.py:102
+#: mtimeslot.py:110 mtimeslot.py:119 mtimeslot.py:127 mtimeslot.py:135
+#: mtimeslot.py:143 mtimeslot.py:151 mtimeslot.py:159 mtraffic.py:76
+#: mtraffic.py:84 mtraffic.py:92 mtraffic.py:100 mtraffic.py:108
+#: mtraffic.py:116 mtraffic.py:124 ntm.py:85 ntm.py:95 ntm.py:104 ntm.py:113
+#: ntm.py:121 ntm.py:129 ntm.py:138 ntm.py:146 ntm.py:155 ntm.py:164
+#: ntm.py:172
+msgid "Wrong value for the param"
+msgstr "Nesprávna hodnota parametra"
+
+#: mtime.py:77 mtime.py:85 mtime.py:93 mtime.py:102 mtime.py:110 mtime.py:118
+#: mtime.py:126 mtimeslot.py:86 mtimeslot.py:94 mtimeslot.py:102
+#: mtimeslot.py:110 mtimeslot.py:119 mtimeslot.py:127 mtimeslot.py:135
+#: mtimeslot.py:143 mtimeslot.py:151 mtimeslot.py:159 mtraffic.py:76
+#: mtraffic.py:84 mtraffic.py:92 mtraffic.py:100 mtraffic.py:108
+#: mtraffic.py:116 mtraffic.py:124 ntm.py:85 ntm.py:95 ntm.py:104 ntm.py:113
+#: ntm.py:121 ntm.py:129 ntm.py:138 ntm.py:146 ntm.py:155 ntm.py:164
+#: ntm.py:172
+msgid "or is not stored. Default value"
+msgstr "alebo nie je uložený. Predvolená hodnota"
+
+#: mtime.py:93 mtime.py:126 mtimeslot.py:86 mtimeslot.py:110 mtimeslot.py:143
+#: mtimeslot.py:151 mtraffic.py:124 ntm.py:129
+msgid "True"
+msgstr "Pravda"
+
+#: mtime.py:102 mtime.py:307 mtimeslot.py:119 mtimeslot.py:369 mtraffic.py:339
+msgid "Month"
+msgstr "Mesiac"
+
+#: mtime.py:249 mtime.py:254
+msgid "Time Limit Reached"
+msgstr "Prekročený časový limit"
+
+#: mtime.py:249
+msgid ""
+"Disconnection is done!!\n"
+"Period: {0} to {1}"
+msgstr ""
+"Odpojenie je dokončené!!\n"
+"Perióda: {0} až {1}"
+
+#: mtime.py:254 mtraffic.py:270 mtraffic.py:275
+msgid "Period: {0} to {1}"
+msgstr "Perióda: {0} až {1}"
+
+#: mtime.py:259 mtraffic.py:282
+msgid "NTM - Message"
+msgstr "NTM - Správa"
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Custom"
+msgstr "Vlastný"
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Day"
+msgstr "Deň"
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Week"
+msgstr "Týždeň"
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Year"
+msgstr "Rok"
+
+#: mtime.py:413
+msgid "NTM - Warning!"
+msgstr "NTM - Upozornenie!"
+
+#: mtime.py:413
+msgid "The total time must be > 0 sec. Default value is 1h"
+msgstr "Celkový čas musí byť > 0 sek. Predvolená hodnota je 1h"
+
+#: mtime.py:422 mtimeslot.py:450 mtraffic.py:412 ntmgui.py:450
+msgid "First Day"
+msgstr "Prvý deň"
+
+#: mtime.py:459
+msgid "Warning! mtime.py: total sec is 0."
+msgstr "Upozornenie! mtime.py: celkovo je 0 sek."
+
+#: mtime.py:477 mtimeslot.py:304 mtimeslot.py:309 mtimeslot.py:492
+#: mtraffic.py:459 mtime.gui.h:16 mtimeslot.gui.h:17 mtraffic.gui.h:18
+msgid "Period"
+msgstr "Perióda"
+
+#: mtime.py:484 mtimeslot.py:499 mtraffic.py:466
+msgid "Used {0} of {1}"
+msgstr "Použitých {0} z {1}"
+
+#: mtimeslot.py:66 mtimeslot.py:67 mtimeslot.py:615
+msgid "NTM - Time Slot"
+msgstr "NTM - Časový úsek"
+
+#: mtimeslot.py:66
+msgid "An additional slot was used!"
+msgstr "Bol použitý ďalší usek!"
+
+#: mtimeslot.py:67 mtimeslot.py:615
+msgid "seconds before timeslot end!"
+msgstr "sekúnd pred ukončením časového úseku!"
+
+#: mtimeslot.py:286
+msgid "Timeslot:"
+msgstr "Časový úsek:"
+
+#: mtimeslot.py:304 mtimeslot.py:309
+msgid "Timeslot Limit Reached"
+msgstr "Limit časového úseku dosiahnutý"
+
+#: mtimeslot.py:304 mtraffic.py:270
+msgid "Disconnection is done!!"
+msgstr "Odpojenie je dokončené!!"
+
+#: mtimeslot.py:304 mtimeslot.py:309
+msgid ": {0} to {1}"
+msgstr ": {0} až {1}"
+
+#: mtimeslot.py:499
+msgid "slots"
+msgstr "úseky"
+
+#: mtraffic.py:100 ntmgui.py:159
+msgid "Daily"
+msgstr "Denne"
+
+#: mtraffic.py:270 mtraffic.py:275
+msgid "Traffic Limit Reached"
+msgstr "Limit prenosu dosiahnutý"
+
+#: ntmgui.py:62 ntm_main.gui.h:22
+msgid "Show Window"
+msgstr "Ukázať okno"
+
+#: ntmgui.py:66 ntm_main.gui.h:19
+msgid "Report"
+msgstr "Záznam"
+
+#: ntmgui.py:70
+msgid "Preferences"
+msgstr "Predvoľby"
+
+#: ntmgui.py:74 ntm_main.gui.h:11
+msgid "Info & News"
+msgstr "Info & Novinky"
+
+#: ntmgui.py:78
+msgid "About"
+msgstr "O programe"
+
+#: ntmgui.py:82 ntmgui.py:643
+msgid "Quit"
+msgstr "Ukončiť"
+
+#: ntmgui.py:90
+msgid ""
+"Network Traffic Monitor\n"
+"-Left click: show the counters\n"
+"-Right click: show menu"
+msgstr ""
+"Network Traffic Monitor\n"
+"- Ľavý klik: ukázať počítadlá\n"
+"- Pravý klik: ukázať menu"
+
+#: ntmgui.py:159 ntmgui.py:850 ntmgui.py:886
+msgid "Total"
+msgstr "Celkovo"
+
+#: ntmgui.py:221
+msgid "Show Main Window"
+msgstr "Ukázať hlavné okno"
+
+#: ntmgui.py:221
+msgid "Show Notify"
+msgstr "Ukázať oznámenie"
+
+#: ntmgui.py:364
+msgid "<b>SEL</b>"
+msgstr "<b>Vybrať</b>"
+
+#: ntmgui.py:369
+msgid "<b>Name</b>"
+msgstr "<b>Meno</b>"
+
+#: ntmgui.py:374
+msgid "<b>Info</b>"
+msgstr "<b>Info</b>"
+
+#: ntmgui.py:379
+msgid "<b>State</b>"
+msgstr "<b>Stav</b>"
+
+#: ntmgui.py:389
+msgid "Wired Ethernet"
+msgstr "Káblový Ethernet"
+
+#: ntmgui.py:390
+msgid "802.11 WiFi"
+msgstr "802.11 WiFi"
+
+#: ntmgui.py:391
+msgid "GSM-based cellular WAN"
+msgstr "GSM-založená celulárna sieť WAN"
+
+#: ntmgui.py:392
+msgid "CDMA/IS-95-based cellular WAN"
+msgstr "CDMA/IS-95-založená celulárna sieť WAN"
+
+#: ntmgui.py:393
+msgid "Device type is unknown"
+msgstr "Typ zariadenia je neznámy"
+
+#: ntmgui.py:395
+msgid "ON"
+msgstr "ON"
+
+#: ntmgui.py:396
+msgid "OFF"
+msgstr "OFF"
+
+#: ntmgui.py:408
+#: ntmgui.py:984
+msgid "Online"
+msgstr "Pripojený"
+
+#: ntmgui.py:409
+#: ntmgui.py:981
+msgid "Offline"
+msgstr "Odpojený"
+
+#: ntmgui.py:415
+#: ntmgui.py:884
+#: ntm_main.gui.h:25
+msgid "Traffic"
+msgstr "Prenos"
+
+#: ntmgui.py:422
+#: ntm_main.gui.h:24
+msgid "Time Slot"
+msgstr "Časový úsek"
+
+#: ntmgui.py:428
+#: ntm_main.gui.h:23
+msgid "Time"
+msgstr "Čas"
+
+#: ntmgui.py:462
+msgid "Last Day"
+msgstr "Posledný deň"
+
+#: ntmgui.py:629
+msgid "Monitors your internet traffic."
+msgstr "Váš internetový prenos sa monitoruje."
+
+#: ntmgui.py:650
+msgid "Do you really want to exit from NTM?"
+msgstr "Naozaj chcete ukončiť NTM?"
+
+#: ntmgui.py:695
+msgid "Delete All Data"
+msgstr "Vymazať všetky dáta"
+
+#: ntmgui.py:703
+msgid ""
+"Do you really want to remove all data (report and counters)?\n"
+"The general preferences will be not deleted."
+msgstr ""
+"Naozaj chcete odstrániť všetky dáta (záznamy a počítadlá)?\n"
+"Všeobecné nastavenia nebudú vymazané."
+
+#: ntmgui.py:723
+msgid "Import Data"
+msgstr "Importovať dáta"
+
+#: ntmgui.py:729
+msgid "No such file"
+msgstr "Žiadny takýto súbor"
+
+#: ntmgui.py:838 ntmgui.py:879 ntmgui.py:917
+msgid "Daily Traffic Report"
+msgstr "Záznam denného prenosu"
+
+#: ntmgui.py:844
+msgid "Daily Traffic"
+msgstr "Denný prenos"
+
+#: ntmgui.py:845
+msgid "All value are listed in MB"
+msgstr "Všetky hodnoty sú uvedené v MB"
+
+#: ntmgui.py:851
+msgid "In"
+msgstr "Dnu"
+
+#: ntmgui.py:852
+msgid "Out"
+msgstr "Von"
+
+#: ntmgui.py:881
+msgid "Report - Total"
+msgstr "Záznam - Celkovo"
+
+#: ntmgui.py:885
+msgid "Days with traffic"
+msgstr "Dni s prenosom"
+
+#: ntmgui.py:887
+msgid "Received"
+msgstr "Prijaté"
+
+#: ntmgui.py:888
+msgid "Transmitted"
+msgstr "Odovzdané"
+
+#: ntmgui.py:889
+msgid "Max in one day"
+msgstr "Max. v jednom dni"
+
+#: ntmgui.py:890
+msgid "Min in one day"
+msgstr "Min. v jednom dni"
+
+#: ntmgui.py:895
+msgid "Sessions"
+msgstr "Obdobia"
+
+#: ntmgui.py:896
+msgid "N. sessions"
+msgstr "Počet období"
+
+#: ntmgui.py:897
+msgid "Total time"
+msgstr "Celkový čas"
+
+#: ntmgui.py:898
+msgid "Max session length"
+msgstr "Max. dĺžka obdobia"
+
+#: ntmgui.py:899
+msgid "Min session length"
+msgstr "Min. dĺžka obdobia"
+
+#: ntmgui.py:918
+msgid "Report - Statistic"
+msgstr "Záznam - Štatistika"
+
+#: ntmgui.py:919
+msgid "Coming soon..."
+msgstr "Príde čoskoro…"
+
+#: ntminfo.py:36
+msgid "NTM - Info & News"
+msgstr "NTM - Info & Novinky"
+
+#: ntm.py:104
+msgid "now"
+msgstr "teraz"
+
+#: ntm.py:430
+msgid "NTM - Interface"
+msgstr "NTM - Rozhranie"
+
+#: ntm.py:433
+msgid "Change the interface"
+msgstr "Zmeniť rozhranie"
+
+#: ntm.py:434
+msgid ""
+"The interface \"{0}\" is not detected or inactive.\n"
+"Do you want to confirm the change?"
+msgstr ""
+"Rozhranie \"{0}\" nie je detekované alebo aktívne.\n"
+"Prajete si potvrdiť zmenu?"
+
+#: ntm.py:555
+msgid "Autostart work only with Gnome, KDE and Xfce."
+msgstr "Autoštart funguje len s Gnome, KDE a Xfce."
+
+#: ntm.py:578
+msgid "The interface"
+msgstr "Rozhranie"
+
+#: ntm.py:578
+msgid "is not detected or inactive."
+msgstr "nie je detekované alebo aktívne."
+
+#: ntm.py:584
+msgid "Total\tReceive\tTransm.\tMean Speed of the last {0}\""
+msgstr "Celkovo\tPrijaté\tOdovzdané\tPriemerná rýchosť za posledný {0}\""
+
+#: ntm.py:669
+msgid "Connection Error"
+msgstr "Chyba pripojenia"
+
+#: ntm.py:680
+msgid "NTM - New Version"
+msgstr "NTM - Nová verzia"
+
+#: ntm.py:689
+msgid "Your version"
+msgstr "Vaša verzia"
+
+#: ntm.py:689
+msgid "Last version"
+msgstr "Posledná verzia"
+
+#: ntm.py:779
+msgid "See you later! :)"
+msgstr "Uvidíme sa neskôr! :)"
+
+#: ntm.py:826
+msgid "i18n setup: done!"
+msgstr "i18n setup: dokončené!"
+
+#: ntm.py:841
+msgid "print the version number and exit"
+msgstr "vytlačiť číslo verzie a ukončiť"
+
+#: ntm.py:846
+msgid "show all debug messages"
+msgstr "ukázať všetky ladiace správy"
+
+#: ntm.py:858
+msgid "NTM - Hello!"
+msgstr "NTM - Ahoj!"
+
+#: mtime.gui.h:1 mtimeslot.gui.h:1 mtraffic.gui.h:1 report.gui.h:1
+msgid "<b>First Day</b>"
+msgstr "<b>Prvý deň</b>"
+
+#: mtime.gui.h:2
+msgid "<b>Time Module Pref.</b>"
+msgstr "<b>Predvoľby časového modulu</b>"
+
+#: mtime.gui.h:3
+msgid "<b>Time</b>"
+msgstr "<b>Čas</b>"
+
+#: mtime.gui.h:4 mtimeslot.gui.h:6
+msgid "<small><i>Total</i></small>"
+msgstr "<small><i>Celkovo</i></small>"
+
+# Alebo vľavo?
+#: mtime.gui.h:5 mtimeslot.gui.h:7 mtraffic.gui.h:7
+msgid "<span color='#009000'><small><i>Left</i></small></span>"
+msgstr "<span color='#009000'><small><i>Ostáva</i></small></span>"
+
+#: mtime.gui.h:6 mtimeslot.gui.h:8 mtraffic.gui.h:10
+msgid "<span color='#900000'><small><i>Used</i></small></span>"
+msgstr "<span color='#900000'><small><i>Použité</i></small></span>"
+
+#: mtime.gui.h:7 mtimeslot.gui.h:9 mtraffic.gui.h:11
+msgid "Active"
+msgstr "Aktívny"
+
+#: mtime.gui.h:8 mtimeslot.gui.h:11 mtraffic.gui.h:12
+msgid "Auto Disconnect"
+msgstr "Auto odpojenie"
+
+#: mtime.gui.h:9 mtimeslot.gui.h:12 mtraffic.gui.h:13
+msgid "Auto update"
+msgstr "Auto aktualizácia"
+
+#: mtime.gui.h:10 mtimeslot.gui.h:13 mtraffic.gui.h:14
+msgid "Days :"
+msgstr "Dni:"
+
+#: mtime.gui.h:11 mtimeslot.gui.h:14 mtraffic.gui.h:15
+msgid "First day :"
+msgstr "Prvý deň:"
+
+#: mtime.gui.h:12
+msgid "Hour"
+msgstr "Hodina"
+
+#: mtime.gui.h:13 mtimeslot.gui.h:15 mtraffic.gui.h:16
+msgid "Length :"
+msgstr "Dĺžka:"
+
+#: mtime.gui.h:14
+msgid "Minute"
+msgstr "Minúta"
+
+#: mtime.gui.h:15 mtimeslot.gui.h:16 mtraffic.gui.h:17 report.gui.h:4
+msgid "NTM - Date Choice"
+msgstr "NTM - Voľby času"
+
+#: mtime.gui.h:17
+msgid "Second"
+msgstr "Sekunda"
+
+#: mtime.gui.h:18
+msgid "Total Time :"
+msgstr "Celkový čas:"
+
+#: mtimeslot.gui.h:2
+msgid "<b>Time Slot Preferences</b>"
+msgstr "<b>Predvoľby časového úseku</b>"
+
+#: mtimeslot.gui.h:3
+msgid "<b>Time Slot</b>"
+msgstr "<b>Časový úsek</b>"
+
+#: mtimeslot.gui.h:4
+msgid "<small><i>Slots</i></small>"
+msgstr "<small><i>Úseky</i></small>"
+
+#: mtimeslot.gui.h:5
+msgid "<small><i>This Slot</i></small>"
+msgstr "<small><i>Tento úsek</i></small>"
+
+#: mtimeslot.gui.h:10
+msgid "Alert"
+msgstr "Výstraha"
+
+#: mtimeslot.gui.h:18
+msgid "Sec:"
+msgstr "Sekúnd:"
+
+#: mtimeslot.gui.h:19
+msgid "Slot length [min.] :"
+msgstr "Dĺžka úseku [min]:"
+
+#: mtimeslot.gui.h:20
+msgid "Total Slots :"
+msgstr "Celkovo úsekov:"
+
+#: mtraffic.gui.h:2
+msgid "<b>Traffic Preferences</b>"
+msgstr "<b>Predvoľby prenosu</b>"
+
+#: mtraffic.gui.h:3
+msgid "<b>Traffic</b>"
+msgstr "<b>Prenos</b>"
+
+#: mtraffic.gui.h:4
+msgid "<small><i>All</i></small>"
+msgstr "<small><i>Všetko</i></small>"
+
+#: mtraffic.gui.h:5
+msgid "<small><i>Limit</i></small>"
+msgstr "<small><i>Limit</i></small>"
+
+#: mtraffic.gui.h:6
+msgid "<small>[MB]</small>"
+msgstr "<small>[MB]</small>"
+
+#: mtraffic.gui.h:8
+msgid "<span color='#900000'><small><i>In:</i></small></span>"
+msgstr "<span color='#900000'><small><i>Dnu:</i></small></span>"
+
+#: mtraffic.gui.h:9
+msgid "<span color='#900000'><small><i>Out:</i></small></span>"
+msgstr "<span color='#900000'><small><i>Von:</i></small></span>"
+
+#: mtraffic.gui.h:19
+msgid "Traffic Limit [MB]:"
+msgstr "Limit prenosu [MB]:"
+
+#: ntm_main.gui.h:1
+msgid "Activate:"
+msgstr "Aktívny:"
+
+#: ntm_main.gui.h:2
+msgid "Autorun (Gnome,KDE or Xfce)"
+msgstr "Autospustenie (Gnome,KDE alebo Xfce)"
+
+#: ntm_main.gui.h:3
+msgid "Data"
+msgstr "Dáta"
+
+#: ntm_main.gui.h:4
+msgid "Export"
+msgstr "Exportovať"
+
+#: ntm_main.gui.h:5
+msgid "File"
+msgstr "Súbor"
+
+#: ntm_main.gui.h:6
+msgid "File:"
+msgstr "Súbor:"
+
+#: ntm_main.gui.h:7
+msgid "General"
+msgstr "Všeobecné"
+
+#: ntm_main.gui.h:8
+msgid "Gui"
+msgstr "Gui"
+
+#: ntm_main.gui.h:9
+msgid "Import"
+msgstr "Importovať"
+
+#: ntm_main.gui.h:10
+msgid "Import\\Export Data"
+msgstr "Import\\Export Dát"
+
+#: ntm_main.gui.h:12
+msgid "Interface:"
+msgstr "Rozhranie:"
+
+# Ako je to preložené v Gnone?
+#: ntm_main.gui.h:13
+msgid "Keep the window on top"
+msgstr "Okno vždy navrchu"
+
+#: ntm_main.gui.h:14
+msgid "NTM - Preferences"
+msgstr "NTM - Predvoľby"
+
+#: ntm_main.gui.h:15
+msgid "Offline:"
+msgstr "Odpojený:"
+
+#: ntm_main.gui.h:16
+msgid "Online check:"
+msgstr "Skúška pripojenia:"
+
+#: ntm_main.gui.h:17
+msgid "Online:"
+msgstr "Pripojený:"
+
+#: ntm_main.gui.h:18
+msgid "Remove all traffic and connections data"
+msgstr "Odstrániť všetky dáta o prenose a pripojeniach"
+
+#: ntm_main.gui.h:20
+msgid "Select the Offline Icon"
+msgstr "Vybrať ikonku \"Odpojený\""
+
+#: ntm_main.gui.h:21
+msgid "Select the Online Icon"
+msgstr "Vybrať ikonku \"Pripojený\""
+
+#: ntm_main.gui.h:26
+msgid "Tray Icon"
+msgstr "Ikona v oznamovacej oblasti"
+
+#: ntm_main.gui.h:27
+msgid "Tray Icon Actions"
+msgstr "Akcie ikony v oznamovacej oblasti"
+
+#: ntm_main.gui.h:28
+msgid "Update Interval [sec]:"
+msgstr "Obnovovací interval [sek]:"
+
+#: ntm_main.gui.h:30
+msgid "Window opacity [%]:"
+msgstr "Nepriehliadnosť okna [%]:"
+
+#: report.gui.h:2
+msgid "All"
+msgstr "Všetko"
+
+#: report.gui.h:3
+msgid "From"
+msgstr "Z"
+
+#: report.gui.h:5
+msgid "Report:"
+msgstr "Záznam:"
+
+# alebo Aktualizácia?
+#: report.gui.h:6
+msgid "Update"
+msgstr "Aktualizovať"
+
+#: report.gui.h:7
+msgid "to"
+msgstr "až "
+
+#: selinterface.gui.h:1
+msgid "Interfaces"
+msgstr "Rozhranie"
+
+#: selinterface.gui.h:2
+msgid "Select the interface"
+msgstr "Vybrať rozhranie"
+

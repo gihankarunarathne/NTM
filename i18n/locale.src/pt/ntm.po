@@ -1,0 +1,716 @@
+# Pot file for NTM.
+# Copyright (C) 2010 THE NTM'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the NTM package.
+# Luigi Tullio <tluigi@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: NTM 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-06 01:41+0100\n"
+"PO-Revision-Date: 2010-12-06 01:41+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: event.py:27
+msgid "Unknown event. NTM can not handle this event."
+msgstr "Evento desconhecido. O NTM não consegue processá-lo."
+
+#: monthdelta.py:46
+msgid "months must be an integer"
+msgstr "o mês tem de ser um número inteiro"
+
+#: monthdelta.py:48
+msgid "months must have magnitude <= 99999999"
+msgstr "o mês tem de ter magnitude <= 99999999"
+
+#: monthdelta.py:107
+msgid "date value out of range"
+msgstr "a data está fora do intervalo válido"
+
+#: monthdelta.py:135
+msgid "in-place division of a monthdelta requires an integer divisor"
+msgstr "o divisor tem de ser um número inteiro"
+
+#: monthdelta.py:163
+msgid "start and end must be dates"
+msgstr "o começo e fim têm de ser datas"
+
+#: mtime.py:77 mtime.py:85 mtime.py:93 mtime.py:102 mtime.py:110 mtime.py:118
+#: mtime.py:126 mtimeslot.py:86 mtimeslot.py:94 mtimeslot.py:102
+#: mtimeslot.py:110 mtimeslot.py:119 mtimeslot.py:127 mtimeslot.py:135
+#: mtimeslot.py:143 mtimeslot.py:151 mtimeslot.py:159 mtraffic.py:76
+#: mtraffic.py:84 mtraffic.py:92 mtraffic.py:100 mtraffic.py:108
+#: mtraffic.py:116 mtraffic.py:124 ntm.py:85 ntm.py:95 ntm.py:104 ntm.py:113
+#: ntm.py:121 ntm.py:129 ntm.py:138 ntm.py:146 ntm.py:155 ntm.py:164
+#: ntm.py:172
+msgid "Wrong value for the param"
+msgstr "Valor incorrecto para o parâmetro"
+
+#: mtime.py:77 mtime.py:85 mtime.py:93 mtime.py:102 mtime.py:110 mtime.py:118
+#: mtime.py:126 mtimeslot.py:86 mtimeslot.py:94 mtimeslot.py:102
+#: mtimeslot.py:110 mtimeslot.py:119 mtimeslot.py:127 mtimeslot.py:135
+#: mtimeslot.py:143 mtimeslot.py:151 mtimeslot.py:159 mtraffic.py:76
+#: mtraffic.py:84 mtraffic.py:92 mtraffic.py:100 mtraffic.py:108
+#: mtraffic.py:116 mtraffic.py:124 ntm.py:85 ntm.py:95 ntm.py:104 ntm.py:113
+#: ntm.py:121 ntm.py:129 ntm.py:138 ntm.py:146 ntm.py:155 ntm.py:164
+#: ntm.py:172
+msgid "or is not stored. Default value"
+msgstr "ou não foi guardado. Valor pré-definido."
+
+#: mtime.py:93 mtime.py:126 mtimeslot.py:86 mtimeslot.py:110 mtimeslot.py:143
+#: mtimeslot.py:151 mtraffic.py:124 ntm.py:129
+msgid "True"
+msgstr "Verdadeiro"
+
+#: mtime.py:102 mtime.py:307 mtimeslot.py:119 mtimeslot.py:369 mtraffic.py:339
+msgid "Month"
+msgstr "Mês"
+
+#: mtime.py:249 mtime.py:254
+msgid "Time Limit Reached"
+msgstr "Atingido o limite de tempo"
+
+#: mtime.py:249
+msgid ""
+"Disconnection is done!!\n"
+"Period: {0} to {1}"
+msgstr ""
+"A ligação terminou!!\n"
+"Período: {0} a {1}"
+
+#: mtime.py:254 mtraffic.py:270 mtraffic.py:275
+msgid "Period: {0} to {1}"
+msgstr "Período: {0} a {1}"
+
+#: mtime.py:259 mtraffic.py:282
+msgid "NTM - Message"
+msgstr "NTM - Mensagem"
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Custom"
+msgstr "Personalizado"
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Day"
+msgstr "Dia"
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Week"
+msgstr "Semana"
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Year"
+msgstr "Ano"
+
+#: mtime.py:413
+msgid "NTM - Warning!"
+msgstr "NTM - Aviso!"
+
+#: mtime.py:413
+msgid "The total time must be > 0 sec. Default value is 1h"
+msgstr "O tempo total tem de ser > 0 sec. O valor pré-definido é 1h"
+
+#: mtime.py:422 mtimeslot.py:450 mtraffic.py:412 ntmgui.py:450
+msgid "First Day"
+msgstr "Primeiro Dia"
+
+#: mtime.py:459
+msgid "Warning! mtime.py: total sec is 0."
+msgstr "Aviso! mtime.py: segundos totais = 0."
+
+#: mtime.py:477 mtimeslot.py:304 mtimeslot.py:309 mtimeslot.py:492
+#: mtraffic.py:459 mtime.gui.h:16 mtimeslot.gui.h:17 mtraffic.gui.h:18
+msgid "Period"
+msgstr "Período"
+
+#: mtime.py:484 mtimeslot.py:499 mtraffic.py:466
+msgid "Used {0} of {1}"
+msgstr "Usado {0} de {1}"
+
+#: mtimeslot.py:66 mtimeslot.py:67 mtimeslot.py:615
+msgid "NTM - Time Slot"
+msgstr "NTM - Janela Temporal"
+
+#: mtimeslot.py:66
+msgid "An additional slot was used!"
+msgstr "Foi usada uma janela adicional!"
+
+#: mtimeslot.py:67 mtimeslot.py:615
+msgid "seconds before timeslot end!"
+msgstr "segundos para o fim da janela temporal!"
+
+#: mtimeslot.py:286
+msgid "Timeslot:"
+msgstr "Janela temporal:"
+
+#: mtimeslot.py:304 mtimeslot.py:309
+msgid "Timeslot Limit Reached"
+msgstr "Atingido o limite da janela temporal"
+
+#: mtimeslot.py:304 mtraffic.py:270
+msgid "Disconnection is done!!"
+msgstr "Ligação terminada!!"
+
+#: mtimeslot.py:304 mtimeslot.py:309
+msgid ": {0} to {1}"
+msgstr ": {0} a {1}"
+
+#: mtimeslot.py:499
+msgid "slots"
+msgstr "janelas"
+
+#: mtraffic.py:100 ntmgui.py:159
+msgid "Daily"
+msgstr "Diário"
+
+#: mtraffic.py:270 mtraffic.py:275
+msgid "Traffic Limit Reached"
+msgstr "Limite tráfego atingido"
+
+#: ntmgui.py:62 ntm_main.gui.h:22
+msgid "Show Window"
+msgstr "Mostrar Janela"
+
+#: ntmgui.py:66 ntm_main.gui.h:19
+msgid "Report"
+msgstr "Relatório"
+
+#: ntmgui.py:70
+msgid "Preferences"
+msgstr "Preferências"
+
+#: ntmgui.py:74 ntm_main.gui.h:11
+msgid "Info & News"
+msgstr "Informação & Notícias"
+
+#: ntmgui.py:78
+msgid "About"
+msgstr "Acerca de"
+
+#: ntmgui.py:82 ntmgui.py:643
+msgid "Quit"
+msgstr "Sair"
+
+#: ntmgui.py:90
+msgid ""
+"Network Traffic Monitor\n"
+"-Left click: show the counters\n"
+"-Rigth click: show menu"
+msgstr ""
+"Monitor de Tráfego de Rede\n"
+"-Clique com o botão esquerdo do rato: mostra os contadores\n"
+"-Clique com o botão direito do rato: mostra o menu"
+
+#: ntmgui.py:159 ntmgui.py:850 ntmgui.py:886
+msgid "Total"
+msgstr "Total"
+
+#: ntmgui.py:221
+msgid "Show Main Window"
+msgstr "Mostrar a Janela Principal"
+
+#: ntmgui.py:221
+msgid "Show Notify"
+msgstr "Mostrar Notificações"
+
+#: ntmgui.py:364
+msgid "<b>SEL</b>"
+msgstr "<b>SEL</b>"
+
+#: ntmgui.py:369
+msgid "<b>Name</b>"
+msgstr "<b>Nome</b>"
+
+#: ntmgui.py:374
+msgid "<b>Info</b>"
+msgstr "<b>Informação</b>"
+
+#: ntmgui.py:379
+msgid "<b>State</b>"
+msgstr "<b>Estado</b>"
+
+#: ntmgui.py:389
+msgid "Wired Ethernet"
+msgstr "Ethernet com fios"
+
+#: ntmgui.py:390
+msgid "802.11 WiFi"
+msgstr "802.11 WiFi"
+
+#: ntmgui.py:391
+msgid "GSM-based cellular WAN"
+msgstr "WAN baseada em GSM"
+
+#: ntmgui.py:392
+msgid "CDMA/IS-95-based cellular WAN"
+msgstr "WAN baseada em CDMA/IS-95"
+
+#: ntmgui.py:393
+msgid "Device type is unknown"
+msgstr "O tipo de dispositivo é desconhecido"
+
+#: ntmgui.py:395
+msgid "ON"
+msgstr "Ligado"
+
+#: ntmgui.py:396
+msgid "OFF"
+msgstr "Desligado"
+
+#: ntmgui.py:408 ntmgui.py:984
+msgid "Online"
+msgstr "Ligado"
+
+#: ntmgui.py:409 ntmgui.py:981
+msgid "Offline"
+msgstr "Desligado"
+
+#: ntmgui.py:415 ntmgui.py:884 ntm_main.gui.h:25
+msgid "Traffic"
+msgstr "Tráfego"
+
+#: ntmgui.py:422 ntm_main.gui.h:24
+msgid "Time Slot"
+msgstr "Janela Temporal"
+
+#: ntmgui.py:428 ntm_main.gui.h:23
+msgid "Time"
+msgstr "Tempo"
+
+#: ntmgui.py:462
+msgid "Last Day"
+msgstr "Último Dia"
+
+#: ntmgui.py:629
+msgid "Monitors your internet traffic."
+msgstr "Monitoriza a sua ligação à Internet."
+
+#: ntmgui.py:650
+msgid "Do you really want to exit from NTM?"
+msgstr "Deseja mesmo sair do NTM?"
+
+#: ntmgui.py:695
+msgid "Delete All Data"
+msgstr "Apagar todos os dados"
+
+#: ntmgui.py:703
+msgid ""
+"Do you really want to remove all data (report and counters)?\n"
+"The general preferences will be not deleted."
+msgstr ""
+"Deseja mesmo apagar todos os dados (relatório e contadores)?\n"
+"As preferências gerais não serão apagadas."
+
+#: ntmgui.py:723
+msgid "Import Data"
+msgstr "Importar Dados"
+
+#: ntmgui.py:729
+msgid "No such file"
+msgstr "Ficheiro inexistente"
+
+#: ntmgui.py:838 ntmgui.py:879 ntmgui.py:917
+msgid "Daily Traffic Report"
+msgstr "Relatório Diário de Tráfego"
+
+#: ntmgui.py:844
+msgid "Daily Traffic"
+msgstr "Tráfego Diário"
+
+#: ntmgui.py:845
+msgid "All value are listed in MB"
+msgstr "Todos os valores são em MB"
+
+#: ntmgui.py:851
+msgid "In"
+msgstr "Dentro"
+
+#: ntmgui.py:852
+msgid "Out"
+msgstr "Fora"
+
+#: ntmgui.py:881
+msgid "Report - Total"
+msgstr "Relatório - Total"
+
+#: ntmgui.py:885
+msgid "Days with traffic"
+msgstr "Dias com tráfego"
+
+#: ntmgui.py:887
+msgid "Received"
+msgstr "Recebidos"
+
+#: ntmgui.py:888
+msgid "Trasmitted"
+msgstr "Transmitidos"
+
+#: ntmgui.py:889
+msgid "Max in one day"
+msgstr "Máximo diário"
+
+#: ntmgui.py:890
+msgid "Min in one day"
+msgstr "Mínimo diário"
+
+#: ntmgui.py:895
+msgid "Sessions"
+msgstr "Sessões"
+
+#: ntmgui.py:896
+msgid "N. sessions"
+msgstr "N. sessões"
+
+#: ntmgui.py:897
+msgid "Total time"
+msgstr "Tempo Total"
+
+#: ntmgui.py:898
+msgid "Max session length"
+msgstr "Comprimento do Máximo de Sessões"
+
+#: ntmgui.py:899
+msgid "Min session length"
+msgstr "Comprimento do Mínimo de Sessões"
+
+#: ntmgui.py:918
+msgid "Report - Statistic"
+msgstr "Relatório - Estatísticas"
+
+#: ntmgui.py:919
+msgid "Coming soon..."
+msgstr "Brevemente..."
+
+#: ntminfo.py:36
+msgid "NTM - Info & News"
+msgstr "NTM - Informação & Notícias"
+
+#: ntm.py:104
+msgid "now"
+msgstr "agora"
+
+#: ntm.py:430
+msgid "NTM - Interface"
+msgstr "NTM - Interface"
+
+#: ntm.py:433
+msgid "Change the interface"
+msgstr "Mudar a interface"
+
+#: ntm.py:434
+msgid ""
+"The interface \"{0}\" is not detected or inactive.\n"
+"Do you want to confirm the change?"
+msgstr ""
+"A interface \"{0}\" não foi detectada ou está inactiva.\n"
+"Deseja confirmar a mudança?"
+
+#: ntm.py:555
+msgid "Autostart work only with Gnome, KDE and Xfce."
+msgstr "O arranque automático funciona apenas no Gnome, KDE e Xfce."
+
+#: ntm.py:578
+msgid "The interface"
+msgstr "A interface"
+
+#: ntm.py:578
+msgid "is not detected or inactive."
+msgstr "não foi detectada ou está inactiva."
+
+#: ntm.py:584
+msgid "Total\tReceive\tTransm.\tMean Speed of the last {0}\""
+msgstr "Total\tRecebidos\tTransm.\tDébito médio do último {0}\""
+
+#: ntm.py:669
+msgid "Connection Error"
+msgstr "Erro na ligação"
+
+#: ntm.py:680
+msgid "NTM - New Version"
+msgstr "NTM - Versão Nova"
+
+#: ntm.py:689
+msgid "Your version"
+msgstr "A sua versão"
+
+#: ntm.py:689
+msgid "Last version"
+msgstr "Última versão"
+
+#: ntm.py:779
+msgid "See you later! :)"
+msgstr "Até à próxima! :)"
+
+#: ntm.py:826
+msgid "i18n setup: done!"
+msgstr "configuração i18n : feita!"
+
+#: ntm.py:841
+msgid "print the version number and exit"
+msgstr "mostra a versão e sai"
+
+#: ntm.py:846
+msgid "show all debug messages"
+msgstr "mostra todas as mensagens de depuração"
+
+#: ntm.py:858
+msgid "NTM - Hello!"
+msgstr "NTM - Olá!"
+
+#: mtime.gui.h:1 mtimeslot.gui.h:1 mtraffic.gui.h:1 report.gui.h:1
+msgid "<b>First Day</b>"
+msgstr "<b>Primeiro Dia</b>"
+
+#: mtime.gui.h:2
+msgid "<b>Time Module Pref.</b>"
+msgstr "<b>Pref. Modulação Temporal</b>"
+
+#: mtime.gui.h:3
+msgid "<b>Time</b>"
+msgstr "<b>Tempo</b>"
+
+#: mtime.gui.h:4 mtimeslot.gui.h:6
+msgid "<small><i>Total</i></small>"
+msgstr "<small><i>Total</i></small>"
+
+#: mtime.gui.h:5 mtimeslot.gui.h:7 mtraffic.gui.h:7
+msgid "<span color='#009000'><small><i>Left</i></small></span>"
+msgstr "<span color='#009000'><small><i>Esquerda</i></small></span>"
+
+#: mtime.gui.h:6 mtimeslot.gui.h:8 mtraffic.gui.h:10
+msgid "<span color='#900000'><small><i>Used</i></small></span>"
+msgstr "<span color='#900000'><small><i>Usados</i></small></span>"
+
+#: mtime.gui.h:7 mtimeslot.gui.h:9 mtraffic.gui.h:11
+msgid "Active"
+msgstr "Activo"
+
+#: mtime.gui.h:8 mtimeslot.gui.h:11 mtraffic.gui.h:12
+msgid "Auto Disconnect"
+msgstr "Desligar automaticamente"
+
+#: mtime.gui.h:9 mtimeslot.gui.h:12 mtraffic.gui.h:13
+msgid "Auto update"
+msgstr "Actualizar automaticamente"
+
+#: mtime.gui.h:10 mtimeslot.gui.h:13 mtraffic.gui.h:14
+msgid "Days :"
+msgstr "Dias :"
+
+#: mtime.gui.h:11 mtimeslot.gui.h:14 mtraffic.gui.h:15
+msgid "First day :"
+msgstr "Primeiro dia :"
+
+#: mtime.gui.h:12
+msgid "Hour"
+msgstr "Hora"
+
+#: mtime.gui.h:13 mtimeslot.gui.h:15 mtraffic.gui.h:16
+msgid "Length :"
+msgstr "Comprimento :"
+
+#: mtime.gui.h:14
+msgid "Minute"
+msgstr "Minuto"
+
+#: mtime.gui.h:15 mtimeslot.gui.h:16 mtraffic.gui.h:17 report.gui.h:4
+msgid "NTM - Date Choice"
+msgstr "NTM - Escolha de Data"
+
+#: mtime.gui.h:17
+msgid "Second"
+msgstr "Segundo"
+
+#: mtime.gui.h:18
+msgid "Total Time :"
+msgstr "Tempo Total :"
+
+#: mtimeslot.gui.h:2
+msgid "<b>Time Slot Preferences</b>"
+msgstr "<b>Preferências da Janela Temporal</b>"
+
+#: mtimeslot.gui.h:3
+msgid "<b>Time Slot</b>"
+msgstr "<b>Janela Temporal</b>"
+
+#: mtimeslot.gui.h:4
+msgid "<small><i>Slots</i></small>"
+msgstr "<small><i>Janelas</i></small>"
+
+#: mtimeslot.gui.h:5
+msgid "<small><i>This Slot</i></small>"
+msgstr "<small><i>Esta Janela</i></small>"
+
+#: mtimeslot.gui.h:10
+msgid "Allert"
+msgstr "Aviso"
+
+#: mtimeslot.gui.h:18
+msgid "Sec:"
+msgstr "Seg:"
+
+#: mtimeslot.gui.h:19
+msgid "Slot lenght [min.] :"
+msgstr "Comprimento da janela [min.] :"
+
+#: mtimeslot.gui.h:20
+msgid "Total Slots :"
+msgstr "Janelas Totais :"
+
+#: mtraffic.gui.h:2
+msgid "<b>Traffic Preferences</b>"
+msgstr "<b>Preferências de Tráfego</b>"
+
+#: mtraffic.gui.h:3
+msgid "<b>Traffic</b>"
+msgstr "<b>Tráfego</b>"
+
+#: mtraffic.gui.h:4
+msgid "<small><i>All</i></small>"
+msgstr "<small><i>Tudo</i></small>"
+
+#: mtraffic.gui.h:5
+msgid "<small><i>Limit</i></small>"
+msgstr "<small><i>Limite</i></small>"
+
+#: mtraffic.gui.h:6
+msgid "<small>[MB]</small>"
+msgstr "<small>[MB]</small>"
+
+#: mtraffic.gui.h:8
+msgid "<span color='#900000'><small><i>In:</i></small></span>"
+msgstr "<span color='#900000'><small><i>Dentro:</i></small></span>"
+
+#: mtraffic.gui.h:9
+msgid "<span color='#900000'><small><i>Out:</i></small></span>"
+msgstr "<span color='#900000'><small><i>Fora:</i></small></span>"
+
+#: mtraffic.gui.h:19
+msgid "Traffic Limit [MB]:"
+msgstr "Limite Tráfego  [MB]:"
+
+#: ntm_main.gui.h:1
+msgid "Activate:"
+msgstr "Activar:"
+
+#: ntm_main.gui.h:2
+msgid "Autorun (Gnome,KDE or Xfce)"
+msgstr "Executar automaticamente (Gnome,KDE or Xfce)"
+
+#: ntm_main.gui.h:3
+msgid "Data"
+msgstr "Dados"
+
+#: ntm_main.gui.h:4
+msgid "Export"
+msgstr "Exportar"
+
+#: ntm_main.gui.h:5
+msgid "File"
+msgstr "Ficheiro"
+
+#: ntm_main.gui.h:6
+msgid "File:"
+msgstr "Ficheiro:"
+
+#: ntm_main.gui.h:7
+msgid "General"
+msgstr "Geral"
+
+#: ntm_main.gui.h:8
+msgid "Gui"
+msgstr "Interface gráfico"
+
+#: ntm_main.gui.h:9
+msgid "Import"
+msgstr "Importar"
+
+#: ntm_main.gui.h:10
+msgid "Import\\Export Data"
+msgstr "Importar\\Exportar Dados"
+
+#: ntm_main.gui.h:12
+msgid "Interface:"
+msgstr "Interface:"
+
+#: ntm_main.gui.h:13
+msgid "Keep the window on top"
+msgstr "Manter a janela no topo"
+
+#: ntm_main.gui.h:14
+msgid "NTM - Preferences"
+msgstr "NTM - Preferências"
+
+#: ntm_main.gui.h:15
+msgid "Offline:"
+msgstr "Desligado:"
+
+#: ntm_main.gui.h:16
+msgid "Online check:"
+msgstr "Verificar ligação:"
+
+#: ntm_main.gui.h:17
+msgid "Online:"
+msgstr "Ligado:"
+
+#: ntm_main.gui.h:18
+msgid "Remove all traffic and connections data"
+msgstr "Apagar todos os dados de tráfego e ligações"
+
+#: ntm_main.gui.h:20
+msgid "Select the Offline Icon"
+msgstr "Seleccionar o ícone de desligado"
+
+#: ntm_main.gui.h:21
+msgid "Select the Online Icon"
+msgstr "Seleccionar o ícone de ligado"
+
+#: ntm_main.gui.h:26
+msgid "Tray Icon"
+msgstr "Barra de Aplicações"
+
+#: ntm_main.gui.h:27
+msgid "Tray Icon Actions"
+msgstr "Acções da Barra de Aplicações"
+
+#: ntm_main.gui.h:28
+msgid "Update Interval [sec]:"
+msgstr "Intervalo de Actualização [seg]:"
+
+#: ntm_main.gui.h:30
+msgid "Window opacity [%]:"
+msgstr "Opacidade da Janela [%]:"
+
+#: report.gui.h:2
+msgid "All"
+msgstr "Tudo"
+
+#: report.gui.h:3
+msgid "From"
+msgstr "De"
+
+#: report.gui.h:5
+msgid "Report:"
+msgstr "Relatório"
+
+#: report.gui.h:6
+msgid "Update"
+msgstr "Actualizar"
+
+#: report.gui.h:7
+msgid "to"
+msgstr "para"
+
+#: selinterface.gui.h:1
+msgid "Interfaces"
+msgstr "Interfaces"
+
+#: selinterface.gui.h:2
+msgid "Select the interface"
+msgstr "Seleccionar a interface"

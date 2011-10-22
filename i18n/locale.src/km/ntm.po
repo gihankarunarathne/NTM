@@ -1,0 +1,706 @@
+# Pot file for NTM.
+# Copyright (C) 2010 THE NTM'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the NTM package.
+# Luigi Tullio <tluigi@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: NTM 1.3\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-06 01:41+0100\n"
+"PO-Revision-Date: 2010-12-06 01:41+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: event.py:27
+msgid "Unknown event. NTM can not handle this event."
+msgstr ""
+
+#: monthdelta.py:46
+msgid "months must be an integer"
+msgstr ""
+
+#: monthdelta.py:48
+msgid "months must have magnitude <= 99999999"
+msgstr ""
+
+#: monthdelta.py:107
+msgid "date value out of range"
+msgstr ""
+
+#: monthdelta.py:135
+msgid "in-place division of a monthdelta requires an integer divisor"
+msgstr ""
+
+#: monthdelta.py:163
+msgid "start and end must be dates"
+msgstr ""
+
+#: mtime.py:77 mtime.py:85 mtime.py:93 mtime.py:102 mtime.py:110 mtime.py:118
+#: mtime.py:126 mtimeslot.py:86 mtimeslot.py:94 mtimeslot.py:102
+#: mtimeslot.py:110 mtimeslot.py:119 mtimeslot.py:127 mtimeslot.py:135
+#: mtimeslot.py:143 mtimeslot.py:151 mtimeslot.py:159 mtraffic.py:76
+#: mtraffic.py:84 mtraffic.py:92 mtraffic.py:100 mtraffic.py:108
+#: mtraffic.py:116 mtraffic.py:124 ntm.py:85 ntm.py:95 ntm.py:104 ntm.py:113
+#: ntm.py:121 ntm.py:129 ntm.py:138 ntm.py:146 ntm.py:155 ntm.py:164
+#: ntm.py:172
+msgid "Wrong value for the param"
+msgstr ""
+
+#: mtime.py:77 mtime.py:85 mtime.py:93 mtime.py:102 mtime.py:110 mtime.py:118
+#: mtime.py:126 mtimeslot.py:86 mtimeslot.py:94 mtimeslot.py:102
+#: mtimeslot.py:110 mtimeslot.py:119 mtimeslot.py:127 mtimeslot.py:135
+#: mtimeslot.py:143 mtimeslot.py:151 mtimeslot.py:159 mtraffic.py:76
+#: mtraffic.py:84 mtraffic.py:92 mtraffic.py:100 mtraffic.py:108
+#: mtraffic.py:116 mtraffic.py:124 ntm.py:85 ntm.py:95 ntm.py:104 ntm.py:113
+#: ntm.py:121 ntm.py:129 ntm.py:138 ntm.py:146 ntm.py:155 ntm.py:164
+#: ntm.py:172
+msgid "or is not stored. Default value"
+msgstr ""
+
+#: mtime.py:93 mtime.py:126 mtimeslot.py:86 mtimeslot.py:110 mtimeslot.py:143
+#: mtimeslot.py:151 mtraffic.py:124 ntm.py:129
+msgid "True"
+msgstr ""
+
+#: mtime.py:102 mtime.py:307 mtimeslot.py:119 mtimeslot.py:369 mtraffic.py:339
+msgid "Month"
+msgstr ""
+
+#: mtime.py:249 mtime.py:254
+msgid "Time Limit Reached"
+msgstr ""
+
+#: mtime.py:249
+msgid ""
+"Disconnection is done!!\n"
+"Period: {0} to {1}"
+msgstr ""
+
+#: mtime.py:254 mtraffic.py:270 mtraffic.py:275
+msgid "Period: {0} to {1}"
+msgstr ""
+
+#: mtime.py:259 mtraffic.py:282
+msgid "NTM - Message"
+msgstr ""
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Custom"
+msgstr ""
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Day"
+msgstr ""
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Week"
+msgstr ""
+
+#: mtime.py:307 mtimeslot.py:369 mtraffic.py:339
+msgid "Year"
+msgstr ""
+
+#: mtime.py:413
+msgid "NTM - Warning!"
+msgstr ""
+
+#: mtime.py:413
+msgid "The total time must be > 0 sec. Default value is 1h"
+msgstr ""
+
+#: mtime.py:422 mtimeslot.py:450 mtraffic.py:412 ntmgui.py:450
+msgid "First Day"
+msgstr ""
+
+#: mtime.py:459
+msgid "Warning! mtime.py: total sec is 0."
+msgstr ""
+
+#: mtime.py:477 mtimeslot.py:304 mtimeslot.py:309 mtimeslot.py:492
+#: mtraffic.py:459 mtime.gui.h:16 mtimeslot.gui.h:17 mtraffic.gui.h:18
+msgid "Period"
+msgstr ""
+
+#: mtime.py:484 mtimeslot.py:499 mtraffic.py:466
+msgid "Used {0} of {1}"
+msgstr ""
+
+#: mtimeslot.py:66 mtimeslot.py:67 mtimeslot.py:615
+msgid "NTM - Time Slot"
+msgstr ""
+
+#: mtimeslot.py:66
+msgid "An additional slot was used!"
+msgstr ""
+
+#: mtimeslot.py:67 mtimeslot.py:615
+msgid "seconds before timeslot end!"
+msgstr ""
+
+#: mtimeslot.py:286
+msgid "Timeslot:"
+msgstr ""
+
+#: mtimeslot.py:304 mtimeslot.py:309
+msgid "Timeslot Limit Reached"
+msgstr ""
+
+#: mtimeslot.py:304 mtraffic.py:270
+msgid "Disconnection is done!!"
+msgstr ""
+
+#: mtimeslot.py:304 mtimeslot.py:309
+msgid ": {0} to {1}"
+msgstr ""
+
+#: mtimeslot.py:499
+msgid "slots"
+msgstr ""
+
+#: mtraffic.py:100 ntmgui.py:159
+msgid "Daily"
+msgstr ""
+
+#: mtraffic.py:270 mtraffic.py:275
+msgid "Traffic Limit Reached"
+msgstr ""
+
+#: ntmgui.py:62 ntm_main.gui.h:22
+msgid "Show Window"
+msgstr ""
+
+#: ntmgui.py:66 ntm_main.gui.h:19
+msgid "Report"
+msgstr ""
+
+#: ntmgui.py:70
+msgid "Preferences"
+msgstr ""
+
+#: ntmgui.py:74 ntm_main.gui.h:11
+msgid "Info & News"
+msgstr ""
+
+#: ntmgui.py:78
+msgid "About"
+msgstr ""
+
+#: ntmgui.py:82 ntmgui.py:643
+msgid "Quit"
+msgstr ""
+
+#: ntmgui.py:90
+msgid ""
+"Network Traffic Monitor\n"
+"-Left click: show the counters\n"
+"-Right click: show menu"
+msgstr ""
+
+#: ntmgui.py:159 ntmgui.py:850 ntmgui.py:886
+msgid "Total"
+msgstr ""
+
+#: ntmgui.py:221
+msgid "Show Main Window"
+msgstr ""
+
+#: ntmgui.py:221
+msgid "Show Notify"
+msgstr ""
+
+#: ntmgui.py:364
+msgid "<b>SEL</b>"
+msgstr ""
+
+#: ntmgui.py:369
+msgid "<b>Name</b>"
+msgstr ""
+
+#: ntmgui.py:374
+msgid "<b>Info</b>"
+msgstr ""
+
+#: ntmgui.py:379
+msgid "<b>State</b>"
+msgstr ""
+
+#: ntmgui.py:389
+msgid "Wired Ethernet"
+msgstr ""
+
+#: ntmgui.py:390
+msgid "802.11 WiFi"
+msgstr ""
+
+#: ntmgui.py:391
+msgid "GSM-based cellular WAN"
+msgstr ""
+
+#: ntmgui.py:392
+msgid "CDMA/IS-95-based cellular WAN"
+msgstr ""
+
+#: ntmgui.py:393
+msgid "Device type is unknown"
+msgstr ""
+
+#: ntmgui.py:395
+msgid "ON"
+msgstr ""
+
+#: ntmgui.py:396
+msgid "OFF"
+msgstr ""
+
+#: ntmgui.py:408 ntmgui.py:984
+msgid "Online"
+msgstr ""
+
+#: ntmgui.py:409 ntmgui.py:981
+msgid "Offline"
+msgstr ""
+
+#: ntmgui.py:415 ntmgui.py:884 ntm_main.gui.h:25
+msgid "Traffic"
+msgstr ""
+
+#: ntmgui.py:422 ntm_main.gui.h:24
+msgid "Time Slot"
+msgstr ""
+
+#: ntmgui.py:428 ntm_main.gui.h:23
+msgid "Time"
+msgstr ""
+
+#: ntmgui.py:462
+msgid "Last Day"
+msgstr ""
+
+#: ntmgui.py:629
+msgid "Monitors your internet traffic."
+msgstr ""
+
+#: ntmgui.py:650
+msgid "Do you really want to exit from NTM?"
+msgstr ""
+
+#: ntmgui.py:695
+msgid "Delete All Data"
+msgstr ""
+
+#: ntmgui.py:703
+msgid ""
+"Do you really want to remove all data (report and counters)?\n"
+"The general preferences will be not deleted."
+msgstr ""
+
+#: ntmgui.py:723
+msgid "Import Data"
+msgstr ""
+
+#: ntmgui.py:729
+msgid "No such file"
+msgstr ""
+
+#: ntmgui.py:838 ntmgui.py:879 ntmgui.py:917
+msgid "Daily Traffic Report"
+msgstr ""
+
+#: ntmgui.py:844
+msgid "Daily Traffic"
+msgstr ""
+
+#: ntmgui.py:845
+msgid "All value are listed in MB"
+msgstr ""
+
+#: ntmgui.py:851
+msgid "In"
+msgstr ""
+
+#: ntmgui.py:852
+msgid "Out"
+msgstr ""
+
+#: ntmgui.py:881
+msgid "Report - Total"
+msgstr ""
+
+#: ntmgui.py:885
+msgid "Days with traffic"
+msgstr ""
+
+#: ntmgui.py:887
+msgid "Received"
+msgstr ""
+
+#: ntmgui.py:888
+msgid "Transmitted"
+msgstr ""
+
+#: ntmgui.py:889
+msgid "Max in one day"
+msgstr ""
+
+#: ntmgui.py:890
+msgid "Min in one day"
+msgstr ""
+
+#: ntmgui.py:895
+msgid "Sessions"
+msgstr ""
+
+#: ntmgui.py:896
+msgid "N. sessions"
+msgstr ""
+
+#: ntmgui.py:897
+msgid "Total time"
+msgstr ""
+
+#: ntmgui.py:898
+msgid "Max session length"
+msgstr ""
+
+#: ntmgui.py:899
+msgid "Min session length"
+msgstr ""
+
+#: ntmgui.py:918
+msgid "Report - Statistic"
+msgstr ""
+
+#: ntmgui.py:919
+msgid "Coming soon..."
+msgstr ""
+
+#: ntminfo.py:36
+msgid "NTM - Info & News"
+msgstr ""
+
+#: ntm.py:104
+msgid "now"
+msgstr ""
+
+#: ntm.py:430
+msgid "NTM - Interface"
+msgstr ""
+
+#: ntm.py:433
+msgid "Change the interface"
+msgstr ""
+
+#: ntm.py:434
+msgid ""
+"The interface \"{0}\" is not detected or inactive.\n"
+"Do you want to confirm the change?"
+msgstr ""
+
+#: ntm.py:555
+msgid "Autostart work only with Gnome, KDE and Xfce."
+msgstr ""
+
+#: ntm.py:578
+msgid "The interface"
+msgstr ""
+
+#: ntm.py:578
+msgid "is not detected or inactive."
+msgstr ""
+
+#: ntm.py:584
+msgid "Total\tReceive\tTransm.\tMean Speed of the last {0}\""
+msgstr ""
+
+#: ntm.py:669
+msgid "Connection Error"
+msgstr ""
+
+#: ntm.py:680
+msgid "NTM - New Version"
+msgstr ""
+
+#: ntm.py:689
+msgid "Your version"
+msgstr ""
+
+#: ntm.py:689
+msgid "Last version"
+msgstr ""
+
+#: ntm.py:779
+msgid "See you later! :)"
+msgstr ""
+
+#: ntm.py:826
+msgid "i18n setup: done!"
+msgstr ""
+
+#: ntm.py:841
+msgid "print the version number and exit"
+msgstr ""
+
+#: ntm.py:846
+msgid "show all debug messages"
+msgstr ""
+
+#: ntm.py:858
+msgid "NTM - Hello!"
+msgstr ""
+
+#: mtime.gui.h:1 mtimeslot.gui.h:1 mtraffic.gui.h:1 report.gui.h:1
+msgid "<b>First Day</b>"
+msgstr ""
+
+#: mtime.gui.h:2
+msgid "<b>Time Module Pref.</b>"
+msgstr ""
+
+#: mtime.gui.h:3
+msgid "<b>Time</b>"
+msgstr ""
+
+#: mtime.gui.h:4 mtimeslot.gui.h:6
+msgid "<small><i>Total</i></small>"
+msgstr ""
+
+#: mtime.gui.h:5 mtimeslot.gui.h:7 mtraffic.gui.h:7
+msgid "<span color='#009000'><small><i>Left</i></small></span>"
+msgstr ""
+
+#: mtime.gui.h:6 mtimeslot.gui.h:8 mtraffic.gui.h:10
+msgid "<span color='#900000'><small><i>Used</i></small></span>"
+msgstr ""
+
+#: mtime.gui.h:7 mtimeslot.gui.h:9 mtraffic.gui.h:11
+msgid "Active"
+msgstr ""
+
+#: mtime.gui.h:8 mtimeslot.gui.h:11 mtraffic.gui.h:12
+msgid "Auto Disconnect"
+msgstr ""
+
+#: mtime.gui.h:9 mtimeslot.gui.h:12 mtraffic.gui.h:13
+msgid "Auto update"
+msgstr ""
+
+#: mtime.gui.h:10 mtimeslot.gui.h:13 mtraffic.gui.h:14
+msgid "Days :"
+msgstr ""
+
+#: mtime.gui.h:11 mtimeslot.gui.h:14 mtraffic.gui.h:15
+msgid "First day :"
+msgstr ""
+
+#: mtime.gui.h:12
+msgid "Hour"
+msgstr ""
+
+#: mtime.gui.h:13 mtimeslot.gui.h:15 mtraffic.gui.h:16
+msgid "Length :"
+msgstr ""
+
+#: mtime.gui.h:14
+msgid "Minute"
+msgstr ""
+
+#: mtime.gui.h:15 mtimeslot.gui.h:16 mtraffic.gui.h:17 report.gui.h:4
+msgid "NTM - Date Choice"
+msgstr ""
+
+#: mtime.gui.h:17
+msgid "Second"
+msgstr ""
+
+#: mtime.gui.h:18
+msgid "Total Time :"
+msgstr ""
+
+#: mtimeslot.gui.h:2
+msgid "<b>Time Slot Preferences</b>"
+msgstr ""
+
+#: mtimeslot.gui.h:3
+msgid "<b>Time Slot</b>"
+msgstr ""
+
+#: mtimeslot.gui.h:4
+msgid "<small><i>Slots</i></small>"
+msgstr ""
+
+#: mtimeslot.gui.h:5
+msgid "<small><i>This Slot</i></small>"
+msgstr ""
+
+#: mtimeslot.gui.h:10
+msgid "Alert"
+msgstr ""
+
+#: mtimeslot.gui.h:18
+msgid "Sec:"
+msgstr ""
+
+#: mtimeslot.gui.h:19
+msgid "Slot length[min.] :"
+msgstr ""
+
+#: mtimeslot.gui.h:20
+msgid "Total Slots :"
+msgstr ""
+
+#: mtraffic.gui.h:2
+msgid "<b>Traffic Preferences</b>"
+msgstr ""
+
+#: mtraffic.gui.h:3
+msgid "<b>Traffic</b>"
+msgstr ""
+
+#: mtraffic.gui.h:4
+msgid "<small><i>All</i></small>"
+msgstr ""
+
+#: mtraffic.gui.h:5
+msgid "<small><i>Limit</i></small>"
+msgstr ""
+
+#: mtraffic.gui.h:6
+msgid "<small>[MB]</small>"
+msgstr ""
+
+#: mtraffic.gui.h:8
+msgid "<span color='#900000'><small><i>In:</i></small></span>"
+msgstr ""
+
+#: mtraffic.gui.h:9
+msgid "<span color='#900000'><small><i>Out:</i></small></span>"
+msgstr ""
+
+#: mtraffic.gui.h:19
+msgid "Traffic Limit [MB]:"
+msgstr ""
+
+#: ntm_main.gui.h:1
+msgid "Activate:"
+msgstr ""
+
+#: ntm_main.gui.h:2
+msgid "Autorun (Gnome,KDE or Xfce)"
+msgstr ""
+
+#: ntm_main.gui.h:3
+msgid "Data"
+msgstr ""
+
+#: ntm_main.gui.h:4
+msgid "Export"
+msgstr ""
+
+#: ntm_main.gui.h:5
+msgid "File"
+msgstr ""
+
+#: ntm_main.gui.h:6
+msgid "File:"
+msgstr ""
+
+#: ntm_main.gui.h:7
+msgid "General"
+msgstr ""
+
+#: ntm_main.gui.h:8
+msgid "Gui"
+msgstr ""
+
+#: ntm_main.gui.h:9
+msgid "Import"
+msgstr ""
+
+#: ntm_main.gui.h:10
+msgid "Import\\Export Data"
+msgstr ""
+
+#: ntm_main.gui.h:12
+msgid "Interface:"
+msgstr ""
+
+#: ntm_main.gui.h:13
+msgid "Keep the window on top"
+msgstr ""
+
+#: ntm_main.gui.h:14
+msgid "NTM - Preferences"
+msgstr ""
+
+#: ntm_main.gui.h:15
+msgid "Offline:"
+msgstr ""
+
+#: ntm_main.gui.h:16
+msgid "Online check:"
+msgstr ""
+
+#: ntm_main.gui.h:17
+msgid "Online:"
+msgstr ""
+
+#: ntm_main.gui.h:18
+msgid "Remove all traffic and connections data"
+msgstr ""
+
+#: ntm_main.gui.h:20
+msgid "Select the Offline Icon"
+msgstr ""
+
+#: ntm_main.gui.h:21
+msgid "Select the Online Icon"
+msgstr ""
+
+#: ntm_main.gui.h:26
+msgid "Tray Icon"
+msgstr ""
+
+#: ntm_main.gui.h:27
+msgid "Tray Icon Actions"
+msgstr ""
+
+#: ntm_main.gui.h:28
+msgid "Update Interval [sec]:"
+msgstr ""
+
+#: ntm_main.gui.h:30
+msgid "Window opacity [%]:"
+msgstr ""
+
+#: report.gui.h:2
+msgid "All"
+msgstr ""
+
+#: report.gui.h:3
+msgid "From"
+msgstr ""
+
+#: report.gui.h:5
+msgid "Report:"
+msgstr ""
+
+#: report.gui.h:6
+msgid "Update"
+msgstr ""
+
+#: report.gui.h:7
+msgid "to"
+msgstr ""
+
+#: selinterface.gui.h:1
+msgid "Interfaces"
+msgstr ""
+
+#: selinterface.gui.h:2
+msgid "Select the interface"
+msgstr ""
