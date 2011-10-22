@@ -16,5 +16,7 @@ chmod --verbose +x /usr/share/ntm/stf
 chmod --verbose +x /usr/share/ntm/ntm.py
 chmod --verbose +x /usr/share/ntm/run_ntm.sh
 
-echo OK
+xdg-icon-resource install --novendor --size 64 /usr/share/ntm/stf/nk.ntm_on.png nk.ntm_on
+xdg-icon-resource install --novendor --size 64 /usr/share/ntm/stf/nk.ntm_off.png nk.ntm_off
 
+echo OK

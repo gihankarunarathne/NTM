@@ -15,7 +15,6 @@
 #
 
 
-
 import pygtk
 pygtk.require("2.0")
 import gtk
@@ -48,6 +47,14 @@ class NtmGui(object):
 
         self.last_conn_state = None
 
+        self.unity_panel = self.ntmo.sys_info["unity.panel"]
+        if self.unity_panel:
+            try:
+                import appindicator
+            except:
+                self.unity_panel = False
+        
+
         # Status Icon
         self.statusIcon = gtk.StatusIcon()
 
@@ -55,6 +62,7 @@ class NtmGui(object):
         self.gtkb = gtk.Builder()
         self.gtkb.add_from_file("ntm_main.gui")        
         ##
+
 
         ## Menu
         self.statusIconMenu = self.gtkb.get_object("menu_statusIcon")
@@ -356,6 +364,18 @@ class NtmGui(object):
         ntmtools.translate_control_label(self.gtkb_selint.get_object("button_cancel"))
 
         # self.alarm_player = NKPlayer("./stf/ending.ogg")
+
+        self.indIcontype = 0
+        if not self.unity_panel:
+            self.statusIcon.set_visible(True)
+            self.indIcontype = 1
+        else:
+            self.statusIcon.set_visible(False)    
+            self.appind = appindicator.Indicator("ntm-ai","nk.ntm_off", appindicator.CATEGORY_APPLICATION_STATUS)
+            self.appind.set_status(appindicator.STATUS_ACTIVE)
+            self.appind.set_menu(self.statusIconMenu)
+            self.indIcontype = 2
+
     ## - __init__ ##
     
     
@@ -1062,7 +1082,8 @@ class NtmGui(object):
     ## + ##
     def update_exinfo(self, rtt):
         if rtt < 0:
-            self.label_ping_time.set_text("err")
+            #self.label_ping_time.set_text("err")
+            self.label_ping_time.set_markup(u"<span color='#900000' size='large' weight='heavy'>\u2620</span>") # 0x2630 = SKULL
         else:
             self.label_ping_time.set_text("{0} ms".format(rtt))
             

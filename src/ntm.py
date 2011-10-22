@@ -22,22 +22,115 @@ __author__="Luigi Tullio"
 
 import locale
 import gettext
+import ntmtools
+
+## + i18n ##
+i18n_APP_NAME = "ntm"
+i18n_DIR = "/usr/share/locale"
+i18n_ok = False
+
+err_code = 0
+err_msg = ""
+
+try:
+    locale.setlocale(locale.LC_ALL, '')
+except:
+    err_code = 1
+    err_msg = "locale.setlocale({0}, {1}) Error!".format(locale.LC_ALL, '')
+
+try:
+    locale.bindtextdomain(i18n_APP_NAME, i18n_DIR)
+    gettext.bindtextdomain(i18n_APP_NAME, i18n_DIR)
+    gettext.textdomain(i18n_APP_NAME)
+    i18n_ok = True
+except:
+    err_code = 2
+    err_msg = "locale.setlocale({0}, {1}) Error!".format(locale.LC_ALL, '')
+
+
+if i18n_ok:
+    try:
+        i18n_lang = gettext.translation(i18n_APP_NAME, i18n_DIR)
+    except:            
+        err_code = 3
+        err_msg = "Warning: error in gettext.translation({0}, {1}). Try with '../i18n/locale' directory.".format(i18n_APP_NAME, i18n_DIR)
+        # i18n_DIR = os.getcwd() + "/../i18n/locale" # for no deb install
+        i18n_DIR = "../i18n/locale" # for no deb install
+        try:
+            i18n_lang = gettext.translation(i18n_APP_NAME, i18n_DIR)
+        except:
+            err_code = 4
+            err_msg = "gettext.translation({0}, {1}) : Error!".format(i18n_APP_NAME, i18n_DIR)
+            i18n_ok = False
+
+if i18n_ok:  
+    _ = i18n_lang.gettext
+    err_msg = _("i18n setup: done!")
+
+import sys
+import globaldef
+
+# + options
+from optparse import OptionParser
+
+parser = OptionParser()
+parser.add_option(
+    "-v", "--version",
+    action="store_true", dest="version", default=False,
+    help= _("print the version number and exit")
+)
+parser.add_option(
+    "-d", "--debug",
+    action="store_true", dest="debug", default=False,
+    help= _("show all debug messages")
+)
+(options, args) = parser.parse_args()
+
+if (options.version):
+    print(globaldef.VERSION)
+    sys.exit(0)
+
+if (options.debug):
+    globaldef.DBGMSG_LEVEL = 10
+# - options
+
+
+
 from gtk import glade
+
+gettext.install(i18n_APP_NAME, i18n_DIR)
+
+for module in glade, gettext :
+    module.bindtextdomain(i18n_APP_NAME, i18n_DIR)
+    module.textdomain(i18n_APP_NAME)
+## - i18n ##
+
+
+print(_("NTM - Hello!"))
+
+import os
+
+##+ debug
+ntmtools.dbg_msg('Environment settings:')
+for env_name in [ 'LC_ALL', 'LC_CTYPE', 'LANG', 'LANGUAGE' ]:
+    ntmtools.dbg_msg('\t%s = %s' % (env_name, os.environ.get(env_name, '')))
+ntmtools.dbg_msg("ntm - locale.LC_ALL={0}".format(locale.LC_ALL))
+ntmtools.dbg_msg("ntm - working dir = {0}".format(os.getcwd()))
+
+ntmtools.dbg_msg("ntm - i18n : {0}".format(err_msg))
+##- debug
+
 
 import gobject
 import sqlite3
 import gtk
 import string
 import urllib2
-import os
 import datetime
 import time
 import sys
-from optparse import OptionParser
 import atexit
 
-import globaldef
-import ntmtools
 from event import Event
 from mtraffic import MTraffic
 from mtimeslot import MTimeSlot
@@ -71,6 +164,10 @@ class NTM():
         self.last_db_update = datetime.datetime.now()
         self.d_rb_db = self.d_tb_db = 0
         
+        self.sys_info = ntmtools.getSysInfo()
+
+        #print(self.sys_info)
+
         self.d_rb, self.d_tb = 0, 0
 
         self.home_path = os.getenv("HOME")
@@ -551,16 +648,12 @@ class NTM():
 
     ## + ##
     def get_autorun(self):
-        ntmtools.dbg_msg("NTM.get_autorun")
-
-        desk_env = ntmtools.get_desktop_environment()
+        des = self.sys_info["des"]
         autorun = False
-        if (desk_env == "gnome") or (desk_env == "xfce"):
+        if des in GNOME_AUTORUN_TYPE_DES:
             autorun = os.path.exists(os.getenv("HOME") + "/.config/autostart/ntm.desktop")
-        elif (desk_env == "kde"):
+        elif des in KDE_AUTORUN_TYPE_DES:
             autorun = os.path.exists(os.getenv("HOME") + "/.kde/Autostart/ntm.sh")
-
-        ntmtools.dbg_msg("END - NTM.get_autorun")
         return autorun
     ## - ##
 
@@ -570,9 +663,9 @@ class NTM():
         ntmtools.dbg_msg("NTM.set_autorun")
 
         try:
-            desk_env = ntmtools.get_desktop_environment()
+            des = self.sys_info["des"]
             if (active):
-                if (desk_env == "gnome") or (desk_env == "xfce"):
+                if des in GNOME_AUTORUN_TYPE_DES:
                     ar_dir = os.getenv("HOME") + "/.config/autostart"
                     ar_file = ar_dir + "/ntm.desktop"
                     autorun = os.path.exists(ar_file)
@@ -582,7 +675,7 @@ class NTM():
                         src = globaldef.NTM_PATH + "/stf/ntm.desktop"
                         # shutil.copyfile(src, ar_file)
                         os.system("cp {0} {1}".format(src, ar_file))
-                elif (desk_env == "kde"):
+                elif (des == "kde"):
                     ar_dir = os.getenv("HOME") + "/.kde/Autostart"
                     ar_file = ar_dir + "/ntm.sh"
                     autorun = os.path.exists(ar_file)
@@ -595,9 +688,9 @@ class NTM():
                 else:
                     ntmtools.dbg_msg(_("Autostart work only with Gnome, KDE and Xfce."))
             else:
-                if (desk_env == "gnome") or (desk_env == "xfce"):
+                if des in GNOME_AUTORUN_TYPE_DES:
                     os.remove(os.getenv("HOME") + "/.config/autostart/ntm.desktop")
-                elif (desk_env == "kde"):
+                elif des in KDE_AUTORUN_TYPE_DES:
                     os.remove(os.getenv("HOME") + "/.kde/Autostart/ntm.sh")
                 else: pass
         except: pass

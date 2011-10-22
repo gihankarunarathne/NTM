@@ -26,26 +26,6 @@ import nettools
 from device import Device
 
 
-# dbus_interface="org.freedesktop.NetworkManager", signal_name="StateChanged"
-NM_STATE_UNKNOWN = 0
-NM_STATE_ASLEEP = 1
-NM_STATE_CONNECTING = 2
-NM_STATE_CONNECTED = 3 
-NM_STATE_DISCONNECTED = 4
-
-# dbus_interface="org.freedesktop.NetworkManager.Device", signal_name="StateChanged"
-NM_DEVICE_STATE_UNKNOWN = 0 
-NM_DEVICE_STATE_UNMANAGED = 1
-NM_DEVICE_STATE_UNAVAILABLE = 2
-NM_DEVICE_STATE_DISCONNECTED = 3
-NM_DEVICE_STATE_PREPARE = 4
-NM_DEVICE_STATE_CONFIG = 5
-NM_DEVICE_STATE_NEED_AUTH = 6
-NM_DEVICE_STATE_IP_CONFIG = 7
-NM_DEVICE_STATE_ACTIVATED = 8
-NM_DEVICE_STATE_FAILED = 9
-
-
 ### + ###
 class NetMan():
 
@@ -70,6 +50,61 @@ class NetMan():
 
         # Create object for using system bus from d-bus
         self.bus = dbus.SystemBus()
+
+        nm_ver = ntmtools.get_nm_version(self.bus)
+        if nm_ver == None:
+            nm_ver = "0.8"
+        if ntmtools.version_compare(nm_ver, "0.8.995") < 0:
+            self.NTM_MAP_STATE_UNKNOWN = [0]
+            self.NTM_MAP_STATE_CONNECTING = [2]
+            self.NTM_MAP_STATE_DISCONNECTING = []
+            self.NTM_MAP_STATE_CONNECTED = [3]
+            self.NTM_MAP_STATE_DISCONNECTED = [1, 4]
+
+            # dbus_interface="org.freedesktop.NetworkManager.Device", signal_name="StateChanged"
+            self.NTM_MAP_NM_DEVICE_STATE_UNKNOWN = [0] 
+            self.NTM_MAP_NM_DEVICE_STATE_UNMANAGED = [1]
+            self.NTM_MAP_NM_DEVICE_STATE_UNAVAILABLE = [2]
+            self.NTM_MAP_NM_DEVICE_STATE_DISCONNECTED = [3]
+            self.NTM_MAP_NM_DEVICE_STATE_PREPARE = [4]
+            self.NTM_MAP_NM_DEVICE_STATE_CONFIG = [5]
+            self.NTM_MAP_NM_DEVICE_STATE_NEED_AUTH = [6]
+            self.NTM_MAP_NM_DEVICE_STATE_IP_CONFIG = [7]
+            self.NTM_MAP_NM_DEVICE_STATE_IP_CHECK = []
+            self.NTM_MAP_NM_DEVICE_STATE_SECONDARIES = []
+            self.NTM_MAP_NM_DEVICE_STATE_ACTIVATED = [8]
+            self.NTM_MAP_NM_DEVICE_STATE_ACTIVATING = []
+            self.NTM_MAP_NM_DEVICE_STATE_FAILED = [9]
+        else:
+            self.NTM_MAP_STATE_UNKNOWN = [0]
+            self.NTM_MAP_STATE_CONNECTING = [40]
+            self.NTM_MAP_STATE_DISCONNECTING = [30]
+            if mode == 2:
+                self.NTM_MAP_STATE_CONNECTED = [50]  # LOCAL
+            elif mode == 3:
+                self.NTM_MAP_STATE_CONNECTED = [60]  # SITE
+            elif mode == 4:
+                self.NTM_MAP_STATE_CONNECTED = [70]  # GLOBAL
+            else:
+                self.NTM_MAP_STATE_CONNECTED = [50, 60, 70]  # LOCAL, SITE, GLOBAL
+                
+            self.NTM_MAP_STATE_DISCONNECTED = [10, 20]
+
+            # dbus_interface="org.freedesktop.NetworkManager.Device", signal_name="StateChanged"
+            self.NTM_MAP_NM_DEVICE_STATE_UNKNOWN = [0] 
+            self.NTM_MAP_NM_DEVICE_STATE_UNMANAGED = [10]
+            self.NTM_MAP_NM_DEVICE_STATE_UNAVAILABLE = [20]
+            self.NTM_MAP_NM_DEVICE_STATE_DISCONNECTED = [30]
+            self.NTM_MAP_NM_DEVICE_STATE_PREPARE = [40]
+            self.NTM_MAP_NM_DEVICE_STATE_CONFIG = [50]
+            self.NTM_MAP_NM_DEVICE_STATE_NEED_AUTH = [60]
+            self.NTM_MAP_NM_DEVICE_STATE_IP_CONFIG = [70]
+            self.NTM_MAP_NM_DEVICE_STATE_IP_CHECK = [80]
+            self.NTM_MAP_NM_DEVICE_STATE_SECONDARIES = [90]
+            self.NTM_MAP_NM_DEVICE_STATE_ACTIVATED = [100]
+            self.NTM_MAP_NM_DEVICE_STATE_ACTIVATING = [110]
+            self.NTM_MAP_NM_DEVICE_STATE_FAILED = [120]
+        # if
 
         (self.device_path, prop_iface) = nettools.get_obj_path(self.bus, interface)
         if (self.device_path == ""):
@@ -169,7 +204,7 @@ class NetMan():
                 dev_proxy = self.bus.get_object("org.freedesktop.NetworkManager", self.device_path)
                 prop_iface = dbus.Interface(dev_proxy, "org.freedesktop.DBus.Properties")
                 state = prop_iface.Get("org.freedesktop.NetworkManager.Device", "State")
-                retVal = (state == NM_DEVICE_STATE_ACTIVATED)
+                retVal = (state in self.NTM_MAP_NM_DEVICE_STATE_ACTIVATED)
             else:
                 retVal = False
                 '''
@@ -245,7 +280,7 @@ class NetMan():
         ntmtools.dbg_msg("NetMan.nm_h_state_changed")
 
         if self.mode == 0: 
-            if new_state == NM_DEVICE_STATE_ACTIVATED:
+            if new_state in self.NTM_MAP_NM_DEVICE_STATE_ACTIVATED:
                 self.set_online()
             else:
                 self.set_offline()
@@ -315,7 +350,7 @@ class NetMan():
                 self.device_path = device_path
                 self.state = prop_iface.Get("org.freedesktop.NetworkManager.Device", "State")
                 self.bus.add_signal_receiver(self.nm_h_state_changed, dbus_interface="org.freedesktop.NetworkManager.Device", signal_name="StateChanged", path = self.device_path)
-                self.online = (self.state == NM_DEVICE_STATE_ACTIVATED)
+                self.online = (self.state in self.NTM_MAP_NM_DEVICE_STATE_ACTIVATED)
                 if self.online:
                     self.set_online()
 

@@ -18,6 +18,9 @@
 
 import dbus
 
+GNOME_AUTORUN_TYPE_DES = ["gnome", "ubuntu", "ubuntu-2d", "xfce", "lxde"] 
+KDE_AUTORUN_TYPE_DES = ["kde"]
+
 
 ## + return the device dbus object ##
 def get_obj_path(bus, device_interface):

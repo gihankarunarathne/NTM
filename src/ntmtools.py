@@ -21,25 +21,113 @@ import math
 import time
 import datetime
 import platform
-import os
+import os, sys
 import string
 from monthdelta import monthdelta
 import commands
-import sys
+import subprocess
+import dbus
+
+
+GNOME_AUTORUN_TYPE_DES = ["gnome", "ubuntu", "ubuntu-2d", "xfce", "lxde"] 
+KDE_AUTORUN_TYPE_DES = ["kde"]
+
+## + ##
+def get_nm_version(bus):
+    version = None
+    
+    proxy = bus.get_object('org.freedesktop.NetworkManager', '/org/freedesktop/NetworkManager')
+    iface = dbus.Interface(proxy, dbus_interface='org.freedesktop.DBus.Properties')
+
+    try:
+        version = iface.Get('org.freedesktop.NetworkManager', 'Version')
+    except:
+        version = "0.8.3"
+    
+    return version
+## - ##
+
+
+### return = 0:ugual; 1:ver1>ver2; -1:ver1<ver2 ###
+# ex: 1.2.1 > 1.2 > 1.2.b > 1.2.a
+def version_compare(ver1, ver2):
+    sv1 = string.split(ver1, '.')
+    sv2 = string.split(ver2, '.')
+
+    if len(sv2) > len(sv1):
+        min = len(sv1)
+    else:
+        min = len(sv2)
+
+    i = 0
+    while i < min:
+        try:
+            val1 = int(sv1[i])
+            int1 = True
+        except:
+            int1 = False
+            
+        try:
+            val2 = int(sv2[i])
+            int2 = True
+        except:
+            int2 = False
+
+        if (int1 and int2):
+            if val1 > val2: return 1
+            if val1 < val2: return -1
+        elif (int1 and not int2):
+            return 1;
+        elif (not int1 and int2):
+            return -1;
+        elif (sv1[i] > sv2[i]):
+            return 1;
+        elif (sv1[i] < sv2[i]):
+            return -1;
+        i += 1
+
+    if len(sv1) > len(sv2): 
+        try:
+            val1 = int(sv1[i])
+            return 1
+        except:
+            return -1
+    elif len(sv1) < len(sv2):   
+        try:
+            val2 = int(sv2[i])
+            return -1
+        except:
+            return 1
+    else: return 0
+### - ###
+
+import globaldef
 
 
 ## get the bytes value then return a string with a compact representation (ex.
-##  '123 bytes', '12.34 KB', '1254.1 MB')
+##  '123 bytes', '1.234 KiB', '12.51 MiB', '123.4 GiB')
 def format_bytes(val):
     tv = 1024.0
-    if (val < tv): return "{0} bytes".format(int(val))
+    if (val < tv):
+        return "{0} bytes".format(int(val))
     tv *= 1024.0
-    if (val < tv): return "{0:.3} KiB".format(1024.0 * val / tv)
+    if (val < tv):
+        val2 = 1024.0 * val / tv
+        if val2 < 10: return "{0:.3f} KiB".format(val2)
+        elif val2 < 100: return "{0:.2f} KiB".format(val2)
+        else: return "{0:.1f} KiB".format(val2)
     tv *= 1024.0
-    if (val < tv): return "{0:.3} MiB".format(1024.0 * val / tv)
-    tv *= 1024.0
-    return "{0:.3} GiB".format(1024.0 * val / tv)
+    if (val < tv): 
+        val2 = 1024.0 * val / tv
+        if val2 < 10: return "{0:.3f} MiB".format(val2)
+        elif val2 < 100: return "{0:.2f} MiB".format(val2)
+        else: return "{0:.1f} MiB".format(val2)
+    val2 = 1.0 * val / tv
+    if val2 < 10: return "{0:.3f} GiB".format(val2)
+    elif val2 < 100: return "{0:.2f} GiB".format(val2)
+    else: return "{0:.1f} GiB".format(val2)
 ## end-def ##
+
 
 
 ## get the seconds then return a string with a compact representation (ex.
@@ -135,58 +223,77 @@ def get_env_info():
 ## - ##
 
 
-### return = 0:ugual; 1:ver1>ver2; -1:ver1<ver2 ###
-# ex: 1.2.1 > 1.2 > 1.2.b > 1.2.a
-def version_compare(ver1, ver2):
-    sv1 = string.split(ver1, '.')
-    sv2 = string.split(ver2, '.')
+## + ##
+def getSysInfo():
+    ret = {}
 
-    if len(sv2) > len(sv1):
-        min = len(sv1)
+    ret["ctime"] = str(datetime.datetime.today())
+    ret["pyver"] = platform.python_version()
+    ret["plat"] = platform.platform()
+    ret["osi"] = os.uname()
+    ret["arc"] = platform.architecture()
+
+    ose = os.environ
+
+    # Desktop Enviroment Graphic Shell
+    des_val = None
+
+    if getDicKey(ose, "KDE_FULL_SESSION") == "true":
+        des_val = "kde"
+    elif getDicKey(ose, "DESKTOP_SESSION") == "gnome":
+        des_val = "gnome"
+    elif getDicKey(ose, "DESKTOP_SESSION") == "ubuntu":
+        des_val = "unity"
+    elif getDicKey(ose, "DESKTOP_SESSION") == "ubuntu-2d":
+        des_val = "unity-2d"
+    elif getDicKey(ose, "DESKTOP_SESSION") == "xubuntu":
+        des_val = "xfce"
+    elif getDicKey(ose, "DESKTOP_SESSION") == "Lubuntu":
+        des_val = "lxde"
     else:
-        min = len(sv2)
+        try:
+            info = commands.getoutput('xprop -root _DT_SAVE_MODE')
+            if ' = "xfce4"' in info:
+                des_val = 'xfce'
+        except (OSError, RuntimeError):
+            pass
+        
+    ret["des"] = des_val
 
-    i = 0
-    while i < min:
-        try:
-            val1 = int(sv1[i])
-            int1 = True
-        except:
-            int1 = False
-            
-        try:
-            val2 = int(sv2[i])
-            int2 = True
-        except:
-            int2 = False
+    # unity    
+    ps = subprocess.Popen(['ps', 'aux'], stdout=subprocess.PIPE).communicate()[0]
+    processes = ps.split('\n')
+    
+    unity_panel = False
+    for row in processes:
+        if row.find("unity-") >= 0:
+            if row.find("unity-panel-service") >= 0:
+                unity_panel = True
+                break
+            elif row.find("unity-2d-panel") >= 0:
+                unity_panel = True
+                break
+    
+    ret["unity.panel"] = unity_panel
+    
 
-        if (int1 and int2):
-            if val1 > val2: return 1
-            if val1 < val2: return -1
-        elif (int1 and not int2):
-            return 1;
-        elif (not int1 and int2):
-            return -1;
-        elif (sv1[i] > sv2[i]):
-            return 1;
-        elif (sv1[i] < sv2[i]):
-            return -1;
-        i += 1
+    return ret
+## - ##
 
-    if len(sv1) > len(sv2): 
-        try:
-            val1 = int(sv1[i])
-            return 1
-        except:
-            return -1
-    elif len(sv1) < len(sv2):   
-        try:
-            val2 = int(sv2[i])
-            return -1
-        except:
-            return 1
-    else: return 0
-### - ###
+
+## + ##
+def autorunSupported(des):
+    return des in ["gnome", "ubuntu-2d", "kde", "xfce", "lxde"]
+## - ##
+
+
+## + ##
+def getDicKey(dic, key):
+    try:
+        return dic[key]
+    except KeyError:
+        return None
+## - ##
 
 
 ### + ###
@@ -207,24 +314,6 @@ def prop2dic(properties_string):
 def dbg_msg(str, lev=10):
     if (lev >= globaldef.DBGMSG_LEVEL):
         sys.stderr.write("[ntm] {0}\n".format(str))
-### - ###
-
-
-### + ###
-def get_desktop_environment():
-    desktop_environment = 'generic'
-    if os.environ.get('KDE_FULL_SESSION') == 'true':
-        desktop_environment = 'kde'
-    elif os.environ.get('GNOME_DESKTOP_SESSION_ID'):
-        desktop_environment = 'gnome'
-    else:
-        try:
-            info = commands.getoutput('xprop -root _DT_SAVE_MODE')
-            if ' = "xfce4"' in info:
-                desktop_environment = 'xfce'
-        except (OSError, RuntimeError):
-            pass
-    return desktop_environment
 ### - ###
 
 

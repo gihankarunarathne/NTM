@@ -14,9 +14,7 @@
 # GNU General Public License for more details.
 #
 
-
-import os
-import sys
+import os, sys
 
 VERSION = "2.0.alpha.b16"
 VERSION_NN = "Implacable Sloth"
