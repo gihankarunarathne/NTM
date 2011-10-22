@@ -14,6 +14,7 @@
 # GNU General Public License for more details.
 #
 
+
 logfile=~/.ntm/ntm.log
 ntmdd=~/.ntm
 
