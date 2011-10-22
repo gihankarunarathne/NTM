@@ -18,7 +18,7 @@
 import os
 import sys
 
-VERSION = "2.0.a.b14"
+VERSION = "2.0.alpha.b16"
 VERSION_NN = "Implacable Sloth"
 
 LICENSE = """NTM Copyright (C) 2009-2011 by Luigi Tullio <tluigi@gmail.com>.

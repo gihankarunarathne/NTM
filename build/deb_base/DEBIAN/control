@@ -1,16 +1,16 @@
 Package: ntm
-Version: 1.3.rc1.b13
+Version: 2.0.alpha.b16
 Section: net
 Priority: optional
-Homepage: netramon.sourceforge.net
+Homepage: http://netramon.sourceforge.net
 Architecture: all
 Essential: no
 Installed-Size: 890
-Maintainer: Luigi Tullio <dev.ntm@gmail.com>
-Depends: python-webkit, python-rsvg, python-notify
-Description: Network Traffic Monitor - 1.3.rc1.b13 (Drunken Monkey)
- - Monitor your internet traffic
- - License GPL
+Maintainer: Luigi Tullio <tluigi@gmail.com>
+Depends: python-webkit, python-rsvg, python-notify, python-glade2
+Description: Network Traffic Monitor - 2.0.alpha.b16 (Implacable Sloth)
+ - Monitor your internet traffic: Data, Time, Timeslot...
+ - License GPL version 2
  - Homepage: http://netramon.sourceforge.net
- - Author: Luigi T. (aka NK) <tluigi@gmail.com>
+ - Author: Luigi Tullio (aka NK) <tluigi@gmail.com>
 
