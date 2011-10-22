@@ -28,7 +28,7 @@ from monthdelta import monthdelta
 import pynotify
 import sqlite3
 import webkit
-
+from time import gmtime, strftime
 
 import sys
 
@@ -109,11 +109,21 @@ class NtmGui(object):
         self.ntmMainWindow_vbox = self.gtkb.get_object("ntmMainWindow_vbox")
 
         self.nsb_conn_state_icon = self.gtkb.get_object("nsb_conn_state_icon")
-        self.nsb_net_name = self.gtkb.get_object("nsb_net_name")
+        #self.nsb_net_name = self.gtkb.get_object("nsb_net_name")
         self.label_ping_time = self.gtkb.get_object("label_ping_time")
         
 
-        self.status_bar = self.gtkb.get_object("statusbar")
+        #self.status_bar = self.gtkb.get_object("statusbar")
+        #self.status_bar.push(self.status_bar.get_context_id("ntm"), " ")
+        
+        #newlabel = gtk.Label("Test")
+        #sbc = self.status_bar.get_message_area().get_children()
+        #for i in sbc:
+        #    if i is gtk.Label:
+        #        i.set_markup("<small><b>Tr</b>:<small>123</small><b>Ts</b>:<small>345</small></small>")
+            #self.status_bar.get_message_area().remove(i)
+        #self.status_bar.get_message_area().add(newlabel)
+        #self.status_bar.get_message_area().pack_end(newlabel, expand=True, fill=True, padding=5)
         
         # New Status Bar #
         self.nsb_conn_state_icon = self.gtkb.get_object("nsb_conn_state_icon")
@@ -438,29 +448,40 @@ class NtmGui(object):
 
     ### + ###
     def show_notify(self):
-        if self.notify_ok:            
-            if self.ntmo.online: smsg = _("Online")
-            else: smsg = _("Offline")
+        if self.ntmo.online: smsg = _("Online")
+        else: smsg = _("Offline")
 
-            message = ""
-            first = True
-            if self.mtraffic != None:
-                if self.mtraffic.active:
-                    message += _("Traffic") + ": {0}".format(self.mtraffic.get_summary_message())
-                    first = False
+        message = ""
+        #smsg = ""
+        first = True
+        if self.mtraffic != None:
+            if self.mtraffic.active:
+                message += _("Traffic") + ": {0}".format(self.mtraffic.get_summary_message())
+                #smsg += _("Tr") + ":{0}".format(self.mtraffic.get_short_message())
+                first = False
 
-            if self.mtimeslot != None:
-                if self.mtimeslot.active:
-                    if not first: message += "\n"
-                    first = False
-                    message += _("Time Slot") + ": {0}".format(self.mtimeslot.get_summary_message())
+        if self.mtimeslot != None:
+            if self.mtimeslot.active:
+                if not first: 
+                    message += "\n"
+                    #smsg += ";"
+                first = False
+                message += _("Time Slot") + ": {0}".format(self.mtimeslot.get_summary_message())
+                #smsg += _("TS") + ":{0}".format(self.mtimeslot.get_short_message())
 
-            if self.mtime != None:
-                if self.mtime.active:
-                    if not first: message += "\n"
-                    first = False
-                    message += _("Time") + ": {0}".format(self.mtime.get_summary_message())
+        if self.mtime != None:
+            if self.mtime.active:
+                if not first: 
+                    message += "\n"
+                    smsg += ";"
+                first = False
+                message += _("Time") + ": {0}".format(self.mtime.get_summary_message())
+                #smsg += _("T") + ":{0}".format(self.mtime.get_short_message())
 
+        #hhmm = strftime("%H:%M", gmtime())
+        #self.status_bar.push(self.status_bar.get_context_id("ntm"), "{0}|{1} ".format(hhmm, smsg))
+
+        if self.notify_ok:
             self.notify_new_slot = pynotify.Notification ("NTM: {0} - {1}".format(self.ntmo.interface, smsg), message)
             self.notify_new_slot.show()
     ### - ###
@@ -859,7 +880,7 @@ class NtmGui(object):
         self.windowPreferences.hide()
         self.windowPreferences_Show = False
 
-        self.update_status_bar_and_icon(self.last_conn_state)
+        self.update_status_and_icon(self.last_conn_state)
     ## - ##
 
 
@@ -1032,7 +1053,7 @@ class NtmGui(object):
     def update_h(self, timestamp, session_start, update_interval, last_rec_traffic, last_tra_traffic, conn_state):
         if conn_state != self.last_conn_state:
             try:
-                self.update_status_bar_and_icon(conn_state)
+                self.update_status_and_icon(conn_state)
             except:
                 ntmtools.dbg_msg("ntmgui.update_h : Unexpected error: " + str(sys.exc_info()), 100)
             self.last_conn_state = conn_state
@@ -1048,7 +1069,7 @@ class NtmGui(object):
     ## - ##
 
     ## + ##
-    def update_status_bar_and_icon(self, conn_state):
+    def update_status_and_icon(self, conn_state):
         device_info = self.ntmo.net_man.device_info
         
         dev_type_text = self.device_type_text(device_info.deviceType)
@@ -1061,7 +1082,7 @@ class NtmGui(object):
                 net_name = device_info.modem_mnc_net_name
             
         
-        self.nsb_net_name.set_markup("<small>{0}</small>".format(net_name))
+        #self.nsb_net_name.set_markup("<small>{0}</small>".format(net_name))
         
         self.nsb_interface_name.set_markup("<small>{0}</small>".format(self.ntmo.interface))
         self.nsb_interface_name.set_tooltip_markup("{0}".format(dev_type_text))

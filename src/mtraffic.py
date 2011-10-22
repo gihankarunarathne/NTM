@@ -502,6 +502,11 @@ class MTraffic():
         return _("Used {0} of {1}").format(ntmtools.format_bytes(traf_tot), ntmtools.format_bytes(self.traffic_limit))
     ## - ##
 
+    ## + ##
+    def get_short_message(self):
+        traf_tot = (self.rec_traffic + self.tra_traffic)        
+        return "{0}".format(ntmtools.format_bytes(traf_tot))
+    ## - ##
 
     ## + ##
     def update_preferences_gui(self):

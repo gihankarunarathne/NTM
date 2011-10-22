@@ -496,7 +496,12 @@ class MTime():
         return _("Used {0} of {1}").format(ntmtools.format_time(total_used_sec), ntmtools.format_time(self.total_sec))
     ## - ##
 
-
+    ## + ##
+    def get_short_message(self):
+        total_used_sec = self.used_sec + self.this_slot_sec
+        return "{0}".format(ntmtools.format_time(total_used_sec))
+    ## - ##
+    
     ## + ##
     def update_preferences_gui(self):
         if self.gtkb == None:

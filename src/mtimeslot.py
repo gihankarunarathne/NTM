@@ -514,6 +514,10 @@ class MTimeSlot():
         return _("Used {0} of {1}").format(self.slotsUsed, self.totalSlots) + " " + _("slots")
     ## - ##
 
+    ## + ##
+    def get_short_message(self):
+        return "{0}s".format(self.slotsUsed)
+    ## - ##
 
     ## + ##
     def update_preferences_gui(self):

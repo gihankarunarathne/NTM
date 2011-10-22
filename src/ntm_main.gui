@@ -118,195 +118,134 @@
           </packing>
         </child>
         <child>
-          <object class="GtkAlignment" id="main_container_bar">
+          <object class="GtkHBox" id="hbox7">
             <property name="visible">True</property>
             <child>
-              <object class="GtkHBox" id="hbox5">
+              <object class="GtkAlignment" id="main_container_bar">
                 <property name="visible">True</property>
                 <child>
-                  <object class="GtkLabel" id="label_space">
+                  <object class="GtkHBox" id="hbox5">
                     <property name="visible">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="padding">1</property>
-                    <property name="position">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkToggleButton" id="nsbt_button_tools">
-                    <property name="can_focus">True</property>
-                    <property name="receives_default">True</property>
                     <child>
-                      <object class="GtkImage" id="image8">
+                      <object class="GtkLabel" id="label_space">
                         <property name="visible">True</property>
-                        <property name="stock">gtk-info</property>
-                      </object>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkVSeparator" id="vseparator2">
-                    <property name="visible">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="padding">1</property>
-                    <property name="position">2</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkImage" id="nsb_conn_state_icon">
-                    <property name="visible">True</property>
-                    <property name="tooltip_text" translatable="yes">Online</property>
-                    <property name="stock">gtk-disconnect</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="padding">1</property>
-                    <property name="position">3</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="nsb_interface_name">
-                    <property name="visible">True</property>
-                    <property name="tooltip_markup">Interface&lt;br&gt;Ethernet</property>
-                    <property name="xpad">1</property>
-                    <property name="label" translatable="yes">&lt;small&gt;eth0&lt;/small&gt;</property>
-                    <property name="use_markup">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="position">4</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkVSeparator" id="vseparator3">
-                    <property name="visible">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="padding">1</property>
-                    <property name="position">5</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkImage" id="image10">
-                    <property name="visible">True</property>
-                    <property name="tooltip_markup">Ping</property>
-                    <property name="xpad">1</property>
-                    <property name="icon_name">emblem-shared</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="position">6</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkLabel" id="label_ping_time">
-                    <property name="visible">True</property>
-                    <property name="tooltip_markup">Ping</property>
-                    <property name="xalign">0</property>
-                    <property name="xpad">1</property>
-                    <property name="label" translatable="yes">-</property>
-                    <property name="use_markup">True</property>
-                  </object>
-                  <packing>
-                    <property name="position">7</property>
-                  </packing>
-                </child>
-              </object>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">5</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkHSeparator" id="hseparator2">
-            <property name="visible">True</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="position">6</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkViewport" id="binf_viewport">
-            <property name="resize_mode">queue</property>
-            <child>
-              <object class="GtkVBox" id="vbox5">
-                <property name="visible">True</property>
-                <child>
-                  <object class="GtkTable" id="table1">
-                    <property name="visible">True</property>
-                    <property name="border_width">1</property>
-                    <property name="n_columns">2</property>
-                    <child>
-                      <object class="GtkImage" id="nsb_cauntry_icon">
-                        <property name="visible">True</property>
-                        <property name="tooltip_markup">Country</property>
-                        <property name="stock">gtk-justify-fill</property>
                       </object>
                       <packing>
-                        <property name="x_options">GTK_FILL</property>
+                        <property name="expand">False</property>
+                        <property name="padding">1</property>
+                        <property name="position">0</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkLabel" id="nsb_net_name">
+                      <object class="GtkToggleButton" id="nsbt_button_tools">
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <child>
+                          <object class="GtkImage" id="image8">
+                            <property name="visible">True</property>
+                            <property name="stock">gtk-info</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVSeparator" id="vseparator2">
                         <property name="visible">True</property>
-                        <property name="xalign">0</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="padding">1</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="nsb_conn_state_icon">
+                        <property name="visible">True</property>
+                        <property name="tooltip_text" translatable="yes">Online</property>
+                        <property name="stock">gtk-disconnect</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="padding">1</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="nsb_interface_name">
+                        <property name="visible">True</property>
                         <property name="xpad">1</property>
-                        <property name="label" translatable="yes">&lt;small&gt;Network Name&lt;/small&gt;</property>
+                        <property name="label" translatable="yes">&lt;small&gt;eth0&lt;/small&gt;</property>
                         <property name="use_markup">True</property>
                       </object>
                       <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
+                        <property name="expand">False</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkVSeparator" id="vseparator3">
+                        <property name="visible">True</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="padding">1</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkImage" id="image10">
+                        <property name="visible">True</property>
+                        <property name="tooltip_markup">Ping Time</property>
+                        <property name="xpad">1</property>
+                        <property name="icon_name">emblem-shared</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="label_ping_time">
+                        <property name="visible">True</property>
+                        <property name="xalign">0</property>
+                        <property name="xpad">1</property>
+                        <property name="label" translatable="yes">-</property>
+                        <property name="use_markup">True</property>
+                      </object>
+                      <packing>
+                        <property name="position">7</property>
                       </packing>
                     </child>
                   </object>
-                  <packing>
-                    <property name="position">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkHBox" id="hbox6">
-                    <property name="visible">True</property>
-                    <child>
-                      <placeholder/>
-                    </child>
-                    <child>
-                      <placeholder/>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="position">1</property>
-                  </packing>
                 </child>
               </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkStatusbar" id="statusbar">
+                <property name="visible">True</property>
+                <property name="spacing">2</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="pack_type">end</property>
+                <property name="position">1</property>
+              </packing>
             </child>
           </object>
           <packing>
             <property name="expand">False</property>
-            <property name="position">7</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkStatusbar" id="statusbar">
-            <property name="visible">True</property>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
             <property name="pack_type">end</property>
-            <property name="position">8</property>
+            <property name="position">5</property>
           </packing>
         </child>
       </object>
