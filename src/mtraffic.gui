@@ -684,7 +684,12 @@
                     <property name="height_request">18</property>
                     <property name="visible">True</property>
                     <child>
-                      <placeholder/>
+                      <object class="GtkEventBox" id="eventbox_bwu">
+                        <property name="visible">True</property>
+                        <child>
+                          <placeholder/>
+                        </child>
+                      </object>
                     </child>
                   </object>
                   <packing>

@@ -324,10 +324,17 @@ class MTraffic():
 
 
         # Bandwidth Usage
-        gui_main_container_bwu = gtkb.get_object("main_container_bwu")
+        self.gui_container_bwu = gtkb.get_object("eventbox_bwu")
+        self.gui_container_bwu.connect('enter_notify_event', self.bwu_hEnter, "e")
+        self.gui_container_bwu.connect('leave_notify_event', self.bwu_hLeave, "l")        
         self.gui_main_bwu = BandWidthUsage()
         self.gui_main_bwu.show()
-        gui_main_container_bwu.add(self.gui_main_bwu)
+        self.gui_container_bwu.add(self.gui_main_bwu)
+
+        self.nw = gtk.Window(type=gtk.WINDOW_POPUP)
+        lab = gtk.Label("WWWWWW")
+        lab.show()
+        self.nw.add(lab)        
         ##
 
         ## Preferences
@@ -394,6 +401,27 @@ class MTraffic():
         ntmtools.translate_control_markup(gtkb.get_object("title"))
 
     ## - ##
+    
+    def bwu_hEnter(self, widget, event, user_param1):
+        ntmtools.dbg_msg("->bwu_hEnter")
+        
+        tlw = gtk.Widget.get_toplevel(self.gui_main_bwu)
+        (tx, ty) = tlw.get_position()
+        #(tx, ty) = tlw.get_origin()
+        (x, y) = gtk.Widget.translate_coordinates(self.gui_main_bwu, tlw, 0, 0);
+        self.nw.move(tx+x, ty+y)
+        
+        #(x, y, m) = tlw.get_pointer()
+        #self.nw.move(x, y-1)
+        
+        #self.nw.show()
+        
+        return False
+
+    def bwu_hLeave(self, widget, event, user_param1):
+        ntmtools.dbg_msg("->bwu_hLeave")
+        #self.nw.hide()
+        return False
             
     ## + ##
     def gui_expander_expanded(self, widget, data=None):
