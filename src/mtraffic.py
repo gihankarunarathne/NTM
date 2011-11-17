@@ -429,6 +429,8 @@ class MTraffic():
         if not self.gui_expander.get_expanded():
             t = threading.Timer(0.15, self.ntm.ntmgui.compact_main_window)
             t.start()
+
+        self.update_main_gui()
     ## - ##
         
     ## + ##
@@ -517,7 +519,11 @@ class MTraffic():
             else: estimate_str = "--"
         else: estimate_str = "--"
 
-        text = "<b>{0}</b> <small>({1:.1f}%) [{2}]</small>".format(_("Traffic"), per, estimate_str)
+        if self.gui_expander.get_expanded():
+            text = "<b>{0}</b> <small>({1:.1f}%) [{2}]</small>".format(_("Traffic"), per, estimate_str)
+        else:
+            text = "<b>{0}</b> {1}<small> ({2:.1f}%)</small>".format(_("Traffic"), ntmtools.format_bytes(traf_tot), per)
+            
         self.gui_main_top_label.set_markup(text)
 
         self.gui_main_period.set_markup("<small><small>" + _("Period") + ": {0} - {1}</small></small>".format(self.first_day, last_day))
